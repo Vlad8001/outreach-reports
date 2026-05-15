@@ -1,31 +1,31 @@
 window.appData = {
-  "lastUpdated": "2026-05-14T18:02:44.229Z",
+  "lastUpdated": "2026-05-15T07:26:33.986Z",
   "campaigns": [
     {
       "id": "ca3iwnjra",
-      "name": "New campaign",
-      "tag": "",
+      "name": " NOVA TOR - A-Class Buildings",
+      "tag": "A-class TOR",
       "stage": "active",
       "metrics": {
         "contacts": {
-          "value": 0,
-          "delta": 0
+          "value": 25,
+          "delta": 25
         },
         "notAddedToSequence": {
-          "value": 0,
-          "delta": 0
+          "value": 15,
+          "delta": -10
         },
         "inbox": {
-          "value": 0,
-          "delta": 0
+          "value": 10,
+          "delta": 10
         },
         "sent": {
-          "value": 0,
-          "delta": 0
+          "value": 10,
+          "delta": 10
         },
         "delivered": {
-          "value": 0,
-          "delta": 0
+          "value": 10,
+          "delta": 10
         },
         "bounced": {
           "value": 0,
@@ -40,12 +40,12 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 0,
-          "delta": 0
+          "value": 1,
+          "delta": 1
         },
         "replyRate": {
-          "value": 0,
-          "delta": 0
+          "value": 10,
+          "delta": 10
         },
         "rfqReceived": {
           "value": 0,
