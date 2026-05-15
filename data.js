@@ -1,6 +1,58 @@
 window.appData = {
-  "lastUpdated": "2026-05-15T07:26:33.986Z",
+  "lastUpdated": "2026-05-15T07:28:22.496Z",
   "campaigns": [
+    {
+      "id": "cepx6kq39",
+      "name": "NOVA TOR - Commercial GC(Top management)",
+      "tag": "",
+      "stage": "active",
+      "metrics": {
+        "contacts": {
+          "value": 10,
+          "delta": 10
+        },
+        "notAddedToSequence": {
+          "value": 0,
+          "delta": -10
+        },
+        "inbox": {
+          "value": 10,
+          "delta": 10
+        },
+        "sent": {
+          "value": 10,
+          "delta": 10
+        },
+        "delivered": {
+          "value": 2,
+          "delta": 2
+        },
+        "bounced": {
+          "value": 0,
+          "delta": 0
+        },
+        "spamBlocked": {
+          "value": 0,
+          "delta": 0
+        },
+        "badData": {
+          "value": 0,
+          "delta": 0
+        },
+        "replies": {
+          "value": 0,
+          "delta": 0
+        },
+        "replyRate": {
+          "value": 0,
+          "delta": 0
+        },
+        "rfqReceived": {
+          "value": 0,
+          "delta": 0
+        }
+      }
+    },
     {
       "id": "ca3iwnjra",
       "name": " NOVA TOR - A-Class Buildings",
