@@ -1,14 +1,14 @@
 window.appData = {
-  "lastUpdated": "2026-05-15T07:28:22.496Z",
+  "lastUpdated": "2026-05-18T06:08:59.509Z",
   "campaigns": [
     {
       "id": "cepx6kq39",
       "name": "NOVA TOR - Commercial GC(Top management)",
-      "tag": "",
+      "tag": "GC(Top management) TOR",
       "stage": "active",
       "metrics": {
         "contacts": {
-          "value": 10,
+          "value": 20,
           "delta": 10
         },
         "notAddedToSequence": {
@@ -16,20 +16,20 @@ window.appData = {
           "delta": -10
         },
         "inbox": {
-          "value": 10,
+          "value": 20,
           "delta": 10
         },
         "sent": {
-          "value": 10,
+          "value": 20,
           "delta": 10
         },
         "delivered": {
-          "value": 2,
-          "delta": 2
+          "value": 18,
+          "delta": 16
         },
         "bounced": {
-          "value": 0,
-          "delta": 0
+          "value": 2,
+          "delta": 2
         },
         "spamBlocked": {
           "value": 0,
@@ -61,27 +61,27 @@ window.appData = {
       "metrics": {
         "contacts": {
           "value": 25,
-          "delta": 25
+          "delta": 0
         },
         "notAddedToSequence": {
-          "value": 15,
+          "value": 5,
           "delta": -10
         },
         "inbox": {
-          "value": 10,
+          "value": 20,
           "delta": 10
         },
         "sent": {
-          "value": 10,
+          "value": 20,
           "delta": 10
         },
         "delivered": {
-          "value": 10,
-          "delta": 10
+          "value": 19,
+          "delta": 9
         },
         "bounced": {
-          "value": 0,
-          "delta": 0
+          "value": 1,
+          "delta": 1
         },
         "spamBlocked": {
           "value": 0,
@@ -93,11 +93,11 @@ window.appData = {
         },
         "replies": {
           "value": 1,
-          "delta": 1
+          "delta": 0
         },
         "replyRate": {
-          "value": 10,
-          "delta": 10
+          "value": 5.3,
+          "delta": -4.7
         },
         "rfqReceived": {
           "value": 0,
