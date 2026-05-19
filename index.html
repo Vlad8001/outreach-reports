@@ -55,6 +55,11 @@
   .page-intro h2 em { font-style: normal; color: var(--amber); }
   .page-intro .subtitle { font-family: var(--mono); color: var(--text-dim); font-size: 12px; text-transform: uppercase; letter-spacing: 0.15em; margin-top: 12px; }
 
+  .date-picker { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
+  .date-picker label { font-family: var(--mono); font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.12em; }
+  .date-picker input { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; color: var(--text); font-family: var(--mono); font-size: 14px; outline: none; cursor: pointer; transition: all 0.2s; box-shadow: var(--shadow-sm); }
+  .date-picker input:hover, .date-picker input:focus { border-color: var(--amber); }
+
   .summary-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 36px; padding: 24px; background: var(--card); border: 1px solid var(--border); border-radius: 16px; position: relative; overflow: hidden; box-shadow: var(--shadow-sm); }
   .summary-row::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent 0%, var(--amber) 50%, transparent 100%); opacity: 0.6; }
   .summary-stat { border-right: 1px solid var(--border); padding-right: 16px; }
@@ -274,7 +279,7 @@ const LS_SETTINGS = 'outreachSettings_v2';
    STATE
 ============================================================ */
 const state = {
-  data: { lastUpdated: '', campaigns: [] },
+  data: { lastUpdated: '', reportDate: '', campaigns: [] },
   view: 'daily',
   ghToken: '',
   ghRepo: '',
@@ -303,19 +308,24 @@ function ensureMetrics(c) {
 }
 
 function migrate(json) {
-  if (!json) return { lastUpdated: '', campaigns: [] };
+  if (!json) return { lastUpdated: '', reportDate: '', campaigns: [] };
   if (Array.isArray(json.campaigns)) {
-    return { lastUpdated: json.lastUpdated || '', campaigns: json.campaigns.map(ensureMetrics) };
+    return {
+      lastUpdated: json.lastUpdated || '',
+      reportDate: json.reportDate || '',
+      campaigns: json.campaigns.map(ensureMetrics)
+    };
   }
   // Old format: { reports: [{date, campaigns: [...]}] }
   if (Array.isArray(json.reports) && json.reports.length) {
     const latest = json.reports[0];
     return {
       lastUpdated: json.lastUpdated || '',
+      reportDate: latest.date || '',
       campaigns: (latest.campaigns || []).map(ensureMetrics)
     };
   }
-  return { lastUpdated: '', campaigns: [] };
+  return { lastUpdated: '', reportDate: '', campaigns: [] };
 }
 
 function loadData() {
@@ -334,12 +344,11 @@ function loadData() {
   try { local = ls ? migrate(JSON.parse(ls)) : null; } catch (e) {}
 
   if (local && remote) {
-    // Compare timestamps; whichever is newer wins
     const lt = local.lastUpdated || '';
     const rt = remote.lastUpdated || '';
     state.data = (rt > lt) ? remote : local;
   } else {
-    state.data = local || remote || { lastUpdated: '', campaigns: [] };
+    state.data = local || remote || { lastUpdated: '', reportDate: '', campaigns: [] };
   }
 
   updateFooter();
@@ -398,16 +407,13 @@ async function syncToGitHub() {
 
   toast('Syncing to GitHub…');
 
-  // Get current SHA (may not exist on first sync)
   let sha = null;
   try {
     const r = await fetch(apiUrl + '?ref=' + encodeURIComponent(branch), { headers });
     if (r.ok) { const d = await r.json(); sha = d.sha; }
   } catch (e) {}
 
-  // Build content
   const content = 'window.appData = ' + JSON.stringify(state.data, null, 2) + ';\n';
-  // base64 encode UTF-8
   const b64 = btoa(unescape(encodeURIComponent(content)));
 
   const body = {
@@ -433,7 +439,7 @@ async function syncToGitHub() {
 }
 
 /* ============================================================
-   PARSER (bulk import from pasted report text)
+   PARSER
 ============================================================ */
 function parseReport(text) {
   const normalized = text.replace(/\r\n/g, '\n').trim();
@@ -477,7 +483,6 @@ function parseReport(text) {
 function importParsed(parsed) {
   let updated = 0, added = 0;
   for (const p of parsed) {
-    // Try to match existing by name (case-insensitive)
     const existing = state.data.campaigns.find(c => c.name.toLowerCase() === p.name.toLowerCase());
     if (existing) {
       existing.tag = p.tag || existing.tag;
@@ -505,7 +510,7 @@ function render() {
 }
 
 /* ============================================================
-   DAILY VIEW (grouped by stage)
+   DAILY VIEW
 ============================================================ */
 function renderDaily() {
   if (!state.data.campaigns.length) {
@@ -517,12 +522,19 @@ function renderDaily() {
   }
 
   const totals = aggregate(state.data.campaigns);
+  const dateLabel = state.data.reportDate
+    ? new Date(state.data.reportDate + 'T00:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+    : '';
 
   let html = `<div class="view">
     <div class="page-intro">
       <div>
         <h2>Daily <em>report</em></h2>
-        <div class="subtitle">${state.data.campaigns.length} total campaigns</div>
+        <div class="subtitle">${state.data.campaigns.length} total campaigns${dateLabel ? ' · ' + dateLabel : ''}</div>
+      </div>
+      <div class="date-picker">
+        <label>Report date</label>
+        <input type="date" id="reportDateInput" value="${state.data.reportDate || ''}" />
       </div>
     </div>
     <div class="summary-row">
@@ -604,7 +616,7 @@ function aggregate(campaigns) {
 function formatNum(n) { return n === undefined || n === null ? '0' : n.toString(); }
 
 /* ============================================================
-   OVERALL VIEW (detailed stats)
+   OVERALL VIEW
 ============================================================ */
 function renderOverall() {
   if (!state.data.campaigns.length) {
@@ -616,16 +628,11 @@ function renderOverall() {
   state.data.campaigns.forEach(c => stageCounts[c.stage] = (stageCounts[c.stage] || 0) + 1);
   const totalCamps = state.data.campaigns.length;
 
-  // Funnel rates
-  const rate = (a, b) => b ? ((a / b) * 100).toFixed(1) : '0.0';
-
-  // Per-stage metrics
   const byStage = STAGES.map(s => {
     const list = state.data.campaigns.filter(c => c.stage === s.id);
     return { ...s, ...aggregate(list), campaignCount: list.length };
   });
 
-  // Sort campaigns for ranking table by RFQ then reply rate
   const ranked = [...state.data.campaigns].sort((a, b) => {
     const ar = a.metrics.rfqReceived.value, br = b.metrics.rfqReceived.value;
     if (br !== ar) return br - ar;
@@ -744,7 +751,7 @@ function renderStageBar(counts, total) {
 }
 
 /* ============================================================
-   MANAGE VIEW (inline editor + import + settings)
+   MANAGE VIEW
 ============================================================ */
 function renderManage() {
   const grouped = STAGES.map(s => ({ ...s, list: state.data.campaigns.filter(c => c.stage === s.id) }));
@@ -846,7 +853,15 @@ function renderEditorCard(c) {
 function attachHandlers() {
   document.querySelectorAll('nav.tabs button').forEach(b => b.onclick = () => setView(b.dataset.view));
 
-  // Manage view bits
+  const reportDateInput = document.getElementById('reportDateInput');
+  if (reportDateInput) {
+    reportDateInput.onchange = (e) => {
+      state.data.reportDate = e.target.value;
+      saveLocal();
+      render();
+    };
+  }
+
   const syncBtn = document.getElementById('syncBtn');
   if (syncBtn) syncBtn.onclick = () => {
     pullSettingsFromInputs();
@@ -865,7 +880,6 @@ function attachHandlers() {
   if (addBtn) addBtn.onclick = () => {
     state.data.campaigns.unshift(ensureMetrics({ id: uid(), name: 'New campaign', tag: '', stage: 'active', metrics: emptyMetrics() }));
     saveLocal(); render();
-    // Focus the new card's name field
     setTimeout(() => {
       const first = document.querySelector('.editor-card input.name-input');
       if (first) { first.focus(); first.select(); }
@@ -886,7 +900,7 @@ function attachHandlers() {
   const resetBtn = document.getElementById('resetBtn');
   if (resetBtn) resetBtn.onclick = () => {
     if (!confirm('Erase ALL campaigns from local storage? You can restore from data.js by reloading after clearing.')) return;
-    state.data = { lastUpdated: '', campaigns: [] };
+    state.data = { lastUpdated: '', reportDate: '', campaigns: [] };
     saveLocal(); render();
   };
 
@@ -904,7 +918,6 @@ function attachHandlers() {
   const clearPasteBtn = document.getElementById('clearPasteBtn');
   if (clearPasteBtn) clearPasteBtn.onclick = () => { document.getElementById('pasteArea').value = ''; };
 
-  // Inline edit listeners (delegated)
   document.querySelectorAll('.editor-card input, .editor-card select').forEach(el => {
     el.oninput = handleInlineEdit;
     el.onchange = handleInlineEdit;
@@ -943,7 +956,6 @@ function handleInlineEdit(e) {
   if (el.type === 'number') value = value === '' ? 0 : parseFloat(value);
   if (Number.isNaN(value)) value = 0;
 
-  // Apply via path
   const parts = field.split('.');
   let obj = c;
   for (let i = 0; i < parts.length - 1; i++) obj = obj[parts[i]];
@@ -954,7 +966,6 @@ function handleInlineEdit(e) {
   clearTimeout(editDebounce);
   editDebounce = setTimeout(() => {
     saveLocal();
-    // If stage changed, re-render to regroup
     if (field === 'stage') render();
   }, 400);
 }
