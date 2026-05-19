@@ -1,5 +1,5 @@
 window.appData = {
-  "lastUpdated": "2026-05-18T06:08:59.509Z",
+  "lastUpdated": "2026-05-19T12:05:30.558Z",
   "campaigns": [
     {
       "id": "cepx6kq39",
@@ -8,7 +8,7 @@ window.appData = {
       "stage": "active",
       "metrics": {
         "contacts": {
-          "value": 20,
+          "value": 30,
           "delta": 10
         },
         "notAddedToSequence": {
@@ -16,20 +16,20 @@ window.appData = {
           "delta": -10
         },
         "inbox": {
-          "value": 20,
+          "value": 30,
           "delta": 10
         },
         "sent": {
-          "value": 20,
+          "value": 30,
           "delta": 10
         },
         "delivered": {
-          "value": 18,
-          "delta": 16
+          "value": 27,
+          "delta": 9
         },
         "bounced": {
-          "value": 2,
-          "delta": 2
+          "value": 3,
+          "delta": 1
         },
         "spamBlocked": {
           "value": 0,
@@ -60,28 +60,28 @@ window.appData = {
       "stage": "active",
       "metrics": {
         "contacts": {
-          "value": 25,
-          "delta": 0
+          "value": 35,
+          "delta": 10
         },
         "notAddedToSequence": {
           "value": 5,
           "delta": -10
         },
         "inbox": {
-          "value": 20,
+          "value": 30,
           "delta": 10
         },
         "sent": {
-          "value": 20,
+          "value": 30,
           "delta": 10
         },
         "delivered": {
-          "value": 19,
-          "delta": 9
+          "value": 26,
+          "delta": 7
         },
         "bounced": {
-          "value": 1,
-          "delta": 1
+          "value": 4,
+          "delta": 3
         },
         "spamBlocked": {
           "value": 0,
@@ -96,8 +96,8 @@ window.appData = {
           "delta": 0
         },
         "replyRate": {
-          "value": 5.3,
-          "delta": -4.7
+          "value": 3.8,
+          "delta": -1.5
         },
         "rfqReceived": {
           "value": 0,
@@ -231,7 +231,7 @@ window.appData = {
         },
         "delivered": {
           "value": 101,
-          "delta": 8
+          "delta": 0
         },
         "bounced": {
           "value": 6,
@@ -239,7 +239,7 @@ window.appData = {
         },
         "replies": {
           "value": 6,
-          "delta": 1
+          "delta": 0
         },
         "spamBlocked": {
           "value": 1,
@@ -247,7 +247,7 @@ window.appData = {
         },
         "replyRate": {
           "value": 7.9,
-          "delta": 1.3
+          "delta": 0
         },
         "rfqReceived": {
           "value": 3,
@@ -271,19 +271,19 @@ window.appData = {
         },
         "notAddedToSequence": {
           "value": 0,
-          "delta": -1
+          "delta": 0
         },
         "inbox": {
           "value": 46,
-          "delta": 1
+          "delta": 0
         },
         "sent": {
           "value": 46,
-          "delta": 1
+          "delta": 0
         },
         "delivered": {
           "value": 41,
-          "delta": 1
+          "delta": 0
         },
         "bounced": {
           "value": 4,
@@ -323,19 +323,19 @@ window.appData = {
         },
         "notAddedToSequence": {
           "value": 20,
-          "delta": -10
+          "delta": 0
         },
         "inbox": {
           "value": 80,
-          "delta": 10
+          "delta": 0
         },
         "sent": {
           "value": 80,
-          "delta": 10
+          "delta": 0
         },
         "delivered": {
           "value": 72,
-          "delta": 10
+          "delta": 0
         },
         "bounced": {
           "value": 2,
@@ -355,7 +355,7 @@ window.appData = {
         },
         "replyRate": {
           "value": 1.38,
-          "delta": -0.23
+          "delta": 0
         },
         "rfqReceived": {
           "value": 1,
@@ -423,23 +423,23 @@ window.appData = {
       "metrics": {
         "contacts": {
           "value": 87,
-          "delta": 13
+          "delta": 0
         },
         "notAddedToSequence": {
           "value": 47,
-          "delta": -10
+          "delta": 0
         },
         "inbox": {
           "value": 40,
-          "delta": 10
+          "delta": 0
         },
         "sent": {
           "value": 40,
-          "delta": 10
+          "delta": 0
         },
         "delivered": {
           "value": 38,
-          "delta": 10
+          "delta": 0
         },
         "bounced": {
           "value": 1,
@@ -451,15 +451,15 @@ window.appData = {
         },
         "replies": {
           "value": 1,
-          "delta": 1
+          "delta": 0
         },
         "replyRate": {
           "value": 2.6,
-          "delta": 2.6
+          "delta": 0
         },
         "rfqReceived": {
           "value": 1,
-          "delta": 1
+          "delta": 0
         },
         "spamBlocked": {
           "value": 0,
