@@ -523,7 +523,11 @@ function renderDaily() {
 
   const totals = aggregate(state.data.campaigns);
   const dateLabel = state.data.reportDate
-    ? new Date(state.data.reportDate + 'T00:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+    ? (() => {
+        const d = new Date(state.data.reportDate + 'T00:00:00');
+        const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+        return `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
+      })()
     : '';
 
   let html = `<div class="view">
