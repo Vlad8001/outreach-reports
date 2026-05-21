@@ -1,6 +1,6 @@
 window.appData = {
-  "lastUpdated": "2026-05-20T09:22:33.898Z",
-  "reportDate": "2026-05-20",
+  "lastUpdated": "2026-05-21T08:05:28.858Z",
+  "reportDate": "2026-05-21",
   "campaigns": [
     {
       "id": "cepx6kq39",
@@ -9,7 +9,7 @@ window.appData = {
       "stage": "active",
       "metrics": {
         "contacts": {
-          "value": 40,
+          "value": 50,
           "delta": 10
         },
         "notAddedToSequence": {
@@ -17,15 +17,15 @@ window.appData = {
           "delta": -10
         },
         "inbox": {
-          "value": 40,
+          "value": 50,
           "delta": 10
         },
         "sent": {
-          "value": 40,
+          "value": 50,
           "delta": 10
         },
         "delivered": {
-          "value": 37,
+          "value": 47,
           "delta": 10
         },
         "bounced": {
@@ -61,32 +61,32 @@ window.appData = {
       "stage": "active",
       "metrics": {
         "contacts": {
-          "value": 35,
-          "delta": 0
+          "value": 45,
+          "delta": 10
         },
         "notAddedToSequence": {
           "value": 5,
-          "delta": 0
+          "delta": -10
         },
         "inbox": {
-          "value": 30,
-          "delta": 0
+          "value": 40,
+          "delta": 10
         },
         "sent": {
-          "value": 30,
-          "delta": 0
+          "value": 40,
+          "delta": 10
         },
         "delivered": {
-          "value": 26,
-          "delta": 0
+          "value": 32,
+          "delta": 6
         },
         "bounced": {
-          "value": 4,
-          "delta": 0
+          "value": 7,
+          "delta": 3
         },
         "spamBlocked": {
-          "value": 0,
-          "delta": 0
+          "value": 1,
+          "delta": 1
         },
         "badData": {
           "value": 0,
@@ -97,8 +97,8 @@ window.appData = {
           "delta": 0
         },
         "replyRate": {
-          "value": 3.8,
-          "delta": 0
+          "value": 3.1,
+          "delta": -0.7
         },
         "rfqReceived": {
           "value": 0,
