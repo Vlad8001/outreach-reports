@@ -1,6 +1,6 @@
 window.appData = {
-  "lastUpdated": "2026-05-21T08:05:28.858Z",
-  "reportDate": "2026-05-21",
+  "lastUpdated": "2026-05-22T10:42:33.671Z",
+  "reportDate": "2026-05-22",
   "campaigns": [
     {
       "id": "cepx6kq39",
@@ -9,24 +9,24 @@ window.appData = {
       "stage": "active",
       "metrics": {
         "contacts": {
-          "value": 50,
-          "delta": 10
+          "value": 54,
+          "delta": 4
         },
         "notAddedToSequence": {
           "value": 0,
-          "delta": -10
+          "delta": -4
         },
         "inbox": {
-          "value": 50,
-          "delta": 10
+          "value": 54,
+          "delta": 4
         },
         "sent": {
-          "value": 50,
-          "delta": 10
+          "value": 54,
+          "delta": 4
         },
         "delivered": {
-          "value": 47,
-          "delta": 10
+          "value": 51,
+          "delta": 4
         },
         "bounced": {
           "value": 3,
@@ -41,12 +41,12 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 0,
-          "delta": 0
+          "value": 1,
+          "delta": 1
         },
         "replyRate": {
-          "value": 0,
-          "delta": 0
+          "value": 2,
+          "delta": 2
         },
         "rfqReceived": {
           "value": 0,
@@ -61,32 +61,32 @@ window.appData = {
       "stage": "active",
       "metrics": {
         "contacts": {
-          "value": 45,
+          "value": 56,
           "delta": 10
         },
         "notAddedToSequence": {
-          "value": 5,
-          "delta": -10
+          "value": 10,
+          "delta": -6
         },
         "inbox": {
-          "value": 40,
-          "delta": 10
+          "value": 46,
+          "delta": 6
         },
         "sent": {
-          "value": 40,
-          "delta": 10
+          "value": 46,
+          "delta": 6
         },
         "delivered": {
-          "value": 32,
+          "value": 38,
           "delta": 6
         },
         "bounced": {
           "value": 7,
-          "delta": 3
+          "delta": 0
         },
         "spamBlocked": {
           "value": 1,
-          "delta": 1
+          "delta": 0
         },
         "badData": {
           "value": 0,
@@ -94,11 +94,11 @@ window.appData = {
         },
         "replies": {
           "value": 1,
-          "delta": 0
+          "delta": 1
         },
         "replyRate": {
-          "value": 3.1,
-          "delta": -0.7
+          "value": 2.6,
+          "delta": -0.5
         },
         "rfqReceived": {
           "value": 0,
@@ -419,27 +419,27 @@ window.appData = {
       "stage": "followup"
     },
     {
-      "name": "new GPR coring companies in US",
+      "name": "RADII-X - new GPR coring companies in US",
       "tag": "RADII-X",
       "metrics": {
         "contacts": {
-          "value": 87,
-          "delta": 0
+          "value": 95,
+          "delta": 10
         },
         "notAddedToSequence": {
-          "value": 47,
-          "delta": 0
+          "value": 0,
+          "delta": -10
         },
         "inbox": {
-          "value": 40,
-          "delta": 0
+          "value": 95,
+          "delta": 10
         },
         "sent": {
-          "value": 40,
-          "delta": 0
+          "value": 95,
+          "delta": 10
         },
         "delivered": {
-          "value": 38,
+          "value": 91,
           "delta": 0
         },
         "bounced": {
@@ -451,24 +451,24 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 1,
-          "delta": 0
+          "value": 4,
+          "delta": 1
         },
         "replyRate": {
-          "value": 2.6,
-          "delta": 0
+          "value": 4.4,
+          "delta": 0.5
         },
         "rfqReceived": {
-          "value": 1,
-          "delta": 0
+          "value": 3,
+          "delta": 1
         },
         "spamBlocked": {
-          "value": 0,
-          "delta": 0
+          "value": 3,
+          "delta": 2
         }
       },
       "id": "ccxu2ja4s",
-      "stage": "followup"
+      "stage": "active"
     }
   ]
 };
