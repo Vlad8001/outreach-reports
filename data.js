@@ -1,12 +1,12 @@
 window.appData = {
-  "lastUpdated": "2026-05-25T08:50:51.504Z",
+  "lastUpdated": "2026-05-26T06:23:38.332Z",
   "reportDate": "2026-05-25",
   "campaigns": [
     {
       "id": "cepx6kq39",
       "name": "NOVA TOR - Commercial GC(Top management)",
       "tag": "GC(Top management) TOR",
-      "stage": "active",
+      "stage": "followup",
       "metrics": {
         "contacts": {
           "value": 54,
@@ -58,7 +58,7 @@ window.appData = {
       "id": "ca3iwnjra",
       "name": " NOVA TOR - A-Class Buildings",
       "tag": "A-class TOR",
-      "stage": "active",
+      "stage": "followup",
       "metrics": {
         "contacts": {
           "value": 56,
@@ -66,23 +66,23 @@ window.appData = {
         },
         "notAddedToSequence": {
           "value": 0,
-          "delta": -10
+          "delta": 0
         },
         "inbox": {
           "value": 56,
-          "delta": 10
+          "delta": 0
         },
         "sent": {
           "value": 56,
-          "delta": 10
+          "delta": 0
         },
         "delivered": {
           "value": 47,
-          "delta": 9
+          "delta": 0
         },
         "bounced": {
           "value": 8,
-          "delta": 1
+          "delta": 0
         },
         "spamBlocked": {
           "value": 1,
@@ -98,7 +98,7 @@ window.appData = {
         },
         "replyRate": {
           "value": 2.1,
-          "delta": -0.5
+          "delta": 0
         },
         "rfqReceived": {
           "value": 0,
@@ -423,7 +423,7 @@ window.appData = {
       "tag": "RADII-X",
       "metrics": {
         "contacts": {
-          "value": 105,
+          "value": 115,
           "delta": 10
         },
         "notAddedToSequence": {
@@ -431,16 +431,16 @@ window.appData = {
           "delta": -10
         },
         "inbox": {
-          "value": 105,
+          "value": 115,
           "delta": 10
         },
         "sent": {
-          "value": 105,
+          "value": 115,
           "delta": 10
         },
         "delivered": {
           "value": 100,
-          "delta": 9
+          "delta": 0
         },
         "bounced": {
           "value": 1,
@@ -456,7 +456,7 @@ window.appData = {
         },
         "replyRate": {
           "value": 4,
-          "delta": -0.4
+          "delta": 0
         },
         "rfqReceived": {
           "value": 3,
