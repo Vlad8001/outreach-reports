@@ -1,5 +1,5 @@
 window.appData = {
-  "lastUpdated": "2026-05-28T08:07:51.549Z",
+  "lastUpdated": "2026-05-28T08:28:26.432Z",
   "reportDate": "2026-05-28",
   "campaigns": [
     {
@@ -239,20 +239,20 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 6,
-          "delta": 0
+          "value": 14,
+          "delta": 8
         },
         "spamBlocked": {
           "value": 1,
           "delta": 0
         },
         "replyRate": {
-          "value": 7.9,
-          "delta": 0
+          "value": 18.4,
+          "delta": 10.5
         },
         "rfqReceived": {
-          "value": 3,
-          "delta": 0
+          "value": 4,
+          "delta": 1
         },
         "badData": {
           "value": 0,
@@ -351,12 +351,12 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 1,
-          "delta": 0
+          "value": 2,
+          "delta": 1
         },
         "replyRate": {
-          "value": 1.38,
-          "delta": 0
+          "value": 2.2,
+          "delta": 0.9
         },
         "rfqReceived": {
           "value": 1,
@@ -395,12 +395,12 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 1,
-          "delta": 0
+          "value": 2,
+          "delta": 1
         },
         "replyRate": {
-          "value": 1.6,
-          "delta": 0
+          "value": 3.2,
+          "delta": 1.6
         },
         "rfqReceived": {
           "value": 0,
