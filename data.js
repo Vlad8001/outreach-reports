@@ -1,6 +1,6 @@
 window.appData = {
-  "lastUpdated": "2026-05-28T08:28:26.432Z",
-  "reportDate": "2026-05-28",
+  "lastUpdated": "2026-06-01T09:23:36.223Z",
+  "reportDate": "2026-06-01",
   "campaigns": [
     {
       "id": "cepx6kq39",
@@ -423,7 +423,7 @@ window.appData = {
       "tag": "RADII-X",
       "metrics": {
         "contacts": {
-          "value": 135,
+          "value": 145,
           "delta": 10
         },
         "notAddedToSequence": {
@@ -431,36 +431,36 @@ window.appData = {
           "delta": -10
         },
         "inbox": {
-          "value": 135,
+          "value": 145,
           "delta": 10
         },
         "sent": {
-          "value": 135,
+          "value": 145,
           "delta": 10
         },
         "delivered": {
-          "value": 127,
-          "delta": 10
+          "value": 136,
+          "delta": 9
         },
         "bounced": {
           "value": 3,
-          "delta": 1
+          "delta": 0
         },
         "badData": {
-          "value": 2,
-          "delta": 0
+          "value": 3,
+          "delta": 1
         },
         "replies": {
           "value": 8,
-          "delta": 3
+          "delta": 0
         },
         "replyRate": {
-          "value": 6.29,
-          "delta": 1.17
+          "value": 5.8,
+          "delta": -0.4
         },
         "rfqReceived": {
           "value": 7,
-          "delta": 2
+          "delta": 0
         },
         "spamBlocked": {
           "value": 4,
