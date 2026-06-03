@@ -1,7 +1,76 @@
 window.appData = {
-  "lastUpdated": "2026-06-03T08:38:07.453Z",
+  "lastUpdated": "2026-06-03T10:41:18.318Z",
   "reportDate": "2026-06-03",
   "campaigns": [
+    {
+      "id": "cn97tqf5z",
+      "name": "GPR Radii-x LinkedIn",
+      "tag": "Radii-x LinkedIn",
+      "type": "linkedin",
+      "stage": "active",
+      "metrics": {
+        "contacts": {
+          "value": 0,
+          "delta": 0
+        },
+        "notAddedToSequence": {
+          "value": 0,
+          "delta": 0
+        },
+        "inbox": {
+          "value": 164,
+          "delta": 0
+        },
+        "sent": {
+          "value": 0,
+          "delta": 0
+        },
+        "delivered": {
+          "value": 0,
+          "delta": 0
+        },
+        "bounced": {
+          "value": 0,
+          "delta": 0
+        },
+        "spamBlocked": {
+          "value": 0,
+          "delta": 0
+        },
+        "badData": {
+          "value": 0,
+          "delta": 0
+        },
+        "replies": {
+          "value": 6,
+          "delta": 6
+        },
+        "replyRate": {
+          "value": 15,
+          "delta": 15
+        },
+        "rfqReceived": {
+          "value": 2,
+          "delta": 0
+        },
+        "connectionSent": {
+          "value": 39,
+          "delta": 39
+        },
+        "connectAccepted": {
+          "value": 10,
+          "delta": 10
+        },
+        "acceptRate": {
+          "value": 25.6,
+          "delta": 25.6
+        },
+        "followed": {
+          "value": 164,
+          "delta": 0
+        }
+      }
+    },
     {
       "id": "cepx6kq39",
       "name": "NOVA TOR - Commercial GC(Top management)",
@@ -52,7 +121,8 @@ window.appData = {
           "value": 0,
           "delta": 0
         }
-      }
+      },
+      "type": "email"
     },
     {
       "id": "ca3iwnjra",
@@ -104,7 +174,8 @@ window.appData = {
           "value": 0,
           "delta": 0
         }
-      }
+      },
+      "type": "email"
     },
     {
       "name": "Mechanical Companies (Vancouver)",
@@ -156,7 +227,8 @@ window.appData = {
         }
       },
       "id": "cxlzweagd",
-      "stage": "followup"
+      "stage": "followup",
+      "type": "email"
     },
     {
       "name": "Electrical Companies (Vancouver)",
@@ -208,7 +280,8 @@ window.appData = {
         }
       },
       "id": "cw861mwgc",
-      "stage": "followup"
+      "stage": "followup",
+      "type": "email"
     },
     {
       "name": "GC (Vancouver)",
@@ -260,7 +333,8 @@ window.appData = {
         }
       },
       "id": "c4o4gvb5t",
-      "stage": "followup"
+      "stage": "followup",
+      "type": "email"
     },
     {
       "name": "GC 100+ employees in Ontario - Intro",
@@ -312,7 +386,8 @@ window.appData = {
         }
       },
       "id": "cctmijqqu",
-      "stage": "followup"
+      "stage": "followup",
+      "type": "email"
     },
     {
       "name": "New Electrical companies (Follow ups)",
@@ -364,7 +439,8 @@ window.appData = {
         }
       },
       "id": "cfw4uqya6",
-      "stage": "followup"
+      "stage": "followup",
+      "type": "email"
     },
     {
       "name": "New General Contractors (com renos, GTA) (Follow Ups)",
@@ -416,7 +492,8 @@ window.appData = {
         }
       },
       "id": "cl8oe1unv",
-      "stage": "followup"
+      "stage": "followup",
+      "type": "email"
     },
     {
       "name": "RADII-X - new GPR coring companies in US",
@@ -468,7 +545,8 @@ window.appData = {
         }
       },
       "id": "ccxu2ja4s",
-      "stage": "followup"
+      "stage": "followup",
+      "type": "email"
     }
   ]
 };
