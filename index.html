@@ -27,6 +27,8 @@
     --amber-bg: rgba(217, 119, 6, 0.1);
     --cyan: #0891b2;
     --cyan-bg: rgba(8, 145, 178, 0.08);
+    --linkedin: #1d4ed8;
+    --linkedin-bg: rgba(29, 78, 216, 0.08);
     --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.06);
     --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.06), 0 2px 6px rgba(15, 23, 42, 0.04);
     --serif: 'Instrument Serif', Georgia, serif;
@@ -93,6 +95,8 @@
   .campaign-tag.tag-prev { color: var(--cyan); background: var(--cyan-bg); }
   .campaign-tag.tag-novator { color: #7c3aed; background: rgba(124, 58, 237, 0.08); }
   .campaign-tag.tag-radiix { color: var(--amber); background: var(--amber-bg); }
+  .campaign-tag.type-linkedin { color: var(--linkedin); background: var(--linkedin-bg); }
+  .campaign-tag.type-email { color: var(--text-muted); background: #f1f5f9; }
 
   .hero-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
   .hero-metric { padding: 16px; background: #f9fafb; border: 1px solid var(--border); border-radius: 12px; }
@@ -156,7 +160,7 @@
   .editor-card.stage-active { border-left: 3px solid var(--green); }
   .editor-card.stage-followup { border-left: 3px solid var(--amber); }
   .editor-card.stage-completed { border-left: 3px solid var(--text-dim); }
-  .editor-header { display: grid; grid-template-columns: 1fr 130px 150px auto; gap: 10px; align-items: center; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+  .editor-header { display: grid; grid-template-columns: 1fr 110px 120px 130px auto; gap: 10px; align-items: center; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
   .editor-header input, .editor-header select { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; color: var(--text); font-family: var(--sans); font-size: 13px; outline: none; transition: border-color 0.2s; }
   .editor-header input:focus, .editor-header select:focus { border-color: var(--amber); }
   .editor-header .name-input { font-weight: 600; font-size: 14px; }
@@ -251,6 +255,38 @@ const STAGES = [
   { id: 'completed', label: 'Completed',  sub: 'Sequence finished' }
 ];
 
+const CAMPAIGN_TYPES = [
+  { id: 'email',    label: 'Email' },
+  { id: 'linkedin', label: 'LinkedIn' }
+];
+
+const METRICS_BY_TYPE = {
+  email: [
+    { key: 'contacts',           label: 'Contacts' },
+    { key: 'notAddedToSequence', label: 'Not Added' },
+    { key: 'inbox',              label: 'Inbox' },
+    { key: 'sent',               label: 'Sent' },
+    { key: 'delivered',          label: 'Delivered' },
+    { key: 'bounced',            label: 'Bounced' },
+    { key: 'spamBlocked',        label: 'Spam Blocked' },
+    { key: 'badData',            label: 'Bad Data' },
+    { key: 'replies',            label: 'Replies' },
+    { key: 'replyRate',          label: 'Reply Rate', suffix: '%' },
+    { key: 'rfqReceived',        label: 'RFQ Received' }
+  ],
+  linkedin: [
+    { key: 'inbox',              label: 'Inbox' },
+    { key: 'connectionSent',     label: 'Connection Sent' },
+    { key: 'connectAccepted',    label: 'Connect Accepted' },
+    { key: 'acceptRate',         label: 'Accept Rate', suffix: '%' },
+    { key: 'followed',           label: 'Followed' },
+    { key: 'replies',            label: 'Replies' },
+    { key: 'replyRate',          label: 'Reply Rate', suffix: '%' },
+    { key: 'rfqReceived',        label: 'RFQ Received' }
+  ]
+};
+
+// Union of all metric keys (used for lookups by key)
 const METRICS = [
   { key: 'contacts',           label: 'Contacts' },
   { key: 'notAddedToSequence', label: 'Not Added' },
@@ -262,15 +298,32 @@ const METRICS = [
   { key: 'badData',            label: 'Bad Data' },
   { key: 'replies',            label: 'Replies' },
   { key: 'replyRate',          label: 'Reply Rate', suffix: '%' },
-  { key: 'rfqReceived',        label: 'RFQ Received' }
+  { key: 'rfqReceived',        label: 'RFQ Received' },
+  { key: 'connectionSent',     label: 'Connection Sent' },
+  { key: 'connectAccepted',    label: 'Connect Accepted' },
+  { key: 'acceptRate',         label: 'Accept Rate', suffix: '%' },
+  { key: 'followed',           label: 'Followed' }
 ];
 
 const ALIAS = {
-  'contacts': 'contacts', 'not added to sequence': 'notAddedToSequence', 'not added': 'notAddedToSequence',
+  // email
+  'contacts': 'contacts',
+  'not added to sequence': 'notAddedToSequence', 'not added': 'notAddedToSequence',
   'inbox': 'inbox', 'sent': 'sent', 'delivered': 'delivered', 'bounced': 'bounced',
-  'spam blocked': 'spamBlocked', 'spam': 'spamBlocked', 'bad data': 'badData',
-  'replies': 'replies', 'reply rate': 'replyRate', 'rfq received': 'rfqReceived', 'rfq': 'rfqReceived'
+  'spam blocked': 'spamBlocked', 'spam': 'spamBlocked',
+  'bad data': 'badData',
+  'replies': 'replies', 'reply rate': 'replyRate',
+  'rfq received': 'rfqReceived', 'rfq': 'rfqReceived',
+  // linkedin
+  'connection sent': 'connectionSent', 'connections sent': 'connectionSent',
+  'connect accepted': 'connectAccepted', 'connection accepted': 'connectAccepted',
+  'accept rate': 'acceptRate', 'acceptance rate': 'acceptRate',
+  'followed': 'followed', 'follows': 'followed'
 };
+
+function getMetricsForType(type) {
+  return METRICS_BY_TYPE[type] || METRICS_BY_TYPE.email;
+}
 
 const LS_KEY = 'outreachData_v2';
 const LS_SETTINGS = 'outreachSettings_v2';
@@ -290,20 +343,16 @@ const state = {
 /* ============================================================
    LOAD & MIGRATE
 ============================================================ */
-function emptyMetrics() {
-  const m = {};
-  METRICS.forEach(x => m[x.key] = { value: 0, delta: 0 });
-  return m;
-}
-
 function ensureMetrics(c) {
-  c.metrics = c.metrics || {};
-  METRICS.forEach(x => {
-    if (!c.metrics[x.key]) c.metrics[x.key] = { value: 0, delta: 0 };
-  });
   if (!c.id) c.id = uid();
   if (!c.stage) c.stage = 'active';
   if (typeof c.tag !== 'string') c.tag = '';
+  if (!c.type) c.type = 'email'; // default for backward compat
+  c.metrics = c.metrics || {};
+  // Ensure all metrics relevant to this type exist
+  getMetricsForType(c.type).forEach(x => {
+    if (!c.metrics[x.key]) c.metrics[x.key] = { value: 0, delta: 0 };
+  });
   return c;
 }
 
@@ -329,7 +378,6 @@ function migrate(json) {
 }
 
 function loadData() {
-  // 1) Load settings
   try {
     const s = JSON.parse(localStorage.getItem(LS_SETTINGS) || '{}');
     state.ghToken = s.ghToken || '';
@@ -337,7 +385,6 @@ function loadData() {
     state.ghBranch = s.ghBranch || 'main';
   } catch (e) {}
 
-  // 2) Load data: localStorage takes priority if newer than data.js
   const ls = localStorage.getItem(LS_KEY);
   const remote = window.appData ? migrate(window.appData) : null;
   let local = null;
@@ -439,20 +486,28 @@ async function syncToGitHub() {
 }
 
 /* ============================================================
-   PARSER
+   PARSER (email + linkedin)
 ============================================================ */
 function parseReport(text) {
   const normalized = text.replace(/\r\n/g, '\n').trim();
-  const blocks = normalized.split(/(?=Email outreach)/g).map(b => b.trim()).filter(b => b.length);
+  const blocks = normalized.split(/(?=^\s*(?:Email outreach|LinkedIn outreach|LinkedIn -|LinkedIn:))/mi)
+    .map(b => b.trim()).filter(b => b.length);
   const parsed = [];
 
   for (const block of blocks) {
-    const headerEndIdx = block.search(/\n?\s*(Contacts|Inbox|Sent|Delivered|Bounced|Spam|Replies|Not added)\s*:/i);
+    const headerEndIdx = block.search(/\n?\s*(Contacts|Inbox|Sent|Delivered|Bounced|Spam|Replies|Not added|Connection|Connect|Followed|Accept)\s*:/i);
     if (headerEndIdx < 0) continue;
     const headerRaw = block.slice(0, headerEndIdx).trim();
     const rest = block.slice(headerEndIdx);
 
-    let cleanHeader = headerRaw.replace(/^Email outreach\s*/i, '').trim();
+    // Detect type by header keyword OR by linkedin-specific metric in body
+    const linkedinByHeader = /LinkedIn/i.test(headerRaw);
+    const linkedinByMetrics = /\b(Connect(ion)?\s+Accepted|Connection\s+Sent|Followed)\s*:/i.test(rest);
+    const type = (linkedinByHeader || linkedinByMetrics) ? 'linkedin' : 'email';
+
+    let cleanHeader = headerRaw
+      .replace(/^(Email outreach|LinkedIn outreach|LinkedIn -|LinkedIn:)\s*/i, '')
+      .trim();
     cleanHeader = cleanHeader.replace(/\s*-?\s*\d{1,2}(:\d{2})?\s*(am|pm)?\s*,\s*[A-Za-z]+\s+\d+.*$/i, '').trim();
 
     let tag = '';
@@ -460,7 +515,9 @@ function parseReport(text) {
     const tagMatch = cleanHeader.match(/^-?\s*([A-Z](?:[A-Z0-9\s\-]*[A-Z0-9])?)\s*-\s+(.+)$/);
     if (tagMatch) { tag = tagMatch[1].trim(); name = tagMatch[2].trim(); }
 
-    const metrics = emptyMetrics();
+    const metrics = {};
+    getMetricsForType(type).forEach(x => metrics[x.key] = { value: 0, delta: 0 });
+
     const lines = rest.split('\n').map(l => l.trim()).filter(l => l);
     for (const line of lines) {
       const m = line.match(/^([A-Za-z][A-Za-z\s]+?)\s*:\s*([\d.]+)(%?)\s*(?:\(([^)]*)\))?/);
@@ -475,7 +532,9 @@ function parseReport(text) {
       }
       metrics[key] = { value, delta };
     }
-    if (Object.values(metrics).some(v => v.value || v.delta)) parsed.push({ name, tag, metrics });
+    if (Object.values(metrics).some(v => v.value || v.delta)) {
+      parsed.push({ name, tag, type, metrics });
+    }
   }
   return parsed;
 }
@@ -486,10 +545,14 @@ function importParsed(parsed) {
     const existing = state.data.campaigns.find(c => c.name.toLowerCase() === p.name.toLowerCase());
     if (existing) {
       existing.tag = p.tag || existing.tag;
+      existing.type = p.type || existing.type || 'email';
       existing.metrics = p.metrics;
+      ensureMetrics(existing);
       updated++;
     } else {
-      state.data.campaigns.push(ensureMetrics({ id: uid(), name: p.name, tag: p.tag, stage: 'active', metrics: p.metrics }));
+      state.data.campaigns.push(ensureMetrics({
+        id: uid(), name: p.name, tag: p.tag, type: p.type, stage: 'active', metrics: p.metrics
+      }));
       added++;
     }
   }
@@ -570,24 +633,26 @@ function renderDaily() {
 function renderCampaignCard(c) {
   const m = c.metrics;
   const tagSlug = c.tag ? c.tag.toLowerCase().replace(/[^a-z]/g, '') : '';
-  const detailKeys = ['contacts','sent','delivered','inbox','bounced','spamBlocked','badData','notAddedToSequence','replies'];
-  const detailHtml = detailKeys.filter(k => m[k]).map(k => {
-    const def = METRICS.find(x => x.key === k);
-    return `<div class="metric">
-      <span class="label">${def.label}</span>
-      <span class="value-block">
-        <span class="value">${formatNum(m[k].value)}</span>
-        ${deltaHtml(m[k].delta)}
-      </span>
-    </div>`;
-  }).join('');
+  const isLI = c.type === 'linkedin';
 
-  return `<div class="campaign-card stage-${c.stage}">
-    <div class="campaign-header">
-      <div class="campaign-title">${escapeHtml(c.name)}</div>
-      ${c.tag ? `<span class="campaign-tag tag-${tagSlug}">${escapeHtml(c.tag)}</span>` : ''}
-    </div>
-    <div class="hero-metrics">
+  // Hero metrics — different per type
+  let heroHtml;
+  if (isLI) {
+    const accept = m.acceptRate || { value: 0, delta: 0 };
+    const rfq = m.rfqReceived || { value: 0, delta: 0 };
+    heroHtml = `
+      <div class="hero-metric">
+        <div class="label">Accept Rate</div>
+        <div class="value">${accept.value}<span style="font-size:18px;color:var(--text-dim)">%</span></div>
+        ${deltaHtml(accept.delta, '%')}
+      </div>
+      <div class="hero-metric highlight">
+        <div class="label">RFQ Received</div>
+        <div class="value">${rfq.value}</div>
+        ${deltaHtml(rfq.delta)}
+      </div>`;
+  } else {
+    heroHtml = `
       <div class="hero-metric">
         <div class="label">Reply Rate</div>
         <div class="value">${m.replyRate.value}<span style="font-size:18px;color:var(--text-dim)">%</span></div>
@@ -597,8 +662,39 @@ function renderCampaignCard(c) {
         <div class="label">RFQ Received</div>
         <div class="value">${m.rfqReceived.value}</div>
         ${deltaHtml(m.rfqReceived.delta)}
+      </div>`;
+  }
+
+  // Detail rows — only keys relevant to this type
+  const detailKeys = isLI
+    ? ['inbox','connectionSent','connectAccepted','followed','replies','replyRate']
+    : ['contacts','sent','delivered','inbox','bounced','spamBlocked','badData','notAddedToSequence','replies'];
+
+  const detailHtml = detailKeys.filter(k => m[k]).map(k => {
+    const def = METRICS.find(x => x.key === k);
+    const sfx = def && def.suffix ? def.suffix : '';
+    return `<div class="metric">
+      <span class="label">${def.label}</span>
+      <span class="value-block">
+        <span class="value">${formatNum(m[k].value)}${sfx}</span>
+        ${deltaHtml(m[k].delta, sfx)}
+      </span>
+    </div>`;
+  }).join('');
+
+  const typeBadge = isLI
+    ? `<span class="campaign-tag type-linkedin">LinkedIn</span>`
+    : '';
+
+  return `<div class="campaign-card stage-${c.stage}">
+    <div class="campaign-header">
+      <div class="campaign-title">${escapeHtml(c.name)}</div>
+      <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;justify-content:flex-end">
+        ${typeBadge}
+        ${c.tag ? `<span class="campaign-tag tag-${tagSlug}">${escapeHtml(c.tag)}</span>` : ''}
       </div>
     </div>
+    <div class="hero-metrics">${heroHtml}</div>
     <div class="metrics-grid">${detailHtml}</div>
   </div>`;
 }
@@ -638,9 +734,12 @@ function renderOverall() {
   });
 
   const ranked = [...state.data.campaigns].sort((a, b) => {
-    const ar = a.metrics.rfqReceived.value, br = b.metrics.rfqReceived.value;
+    const ar = a.metrics.rfqReceived ? a.metrics.rfqReceived.value : 0;
+    const br = b.metrics.rfqReceived ? b.metrics.rfqReceived.value : 0;
     if (br !== ar) return br - ar;
-    return b.metrics.replyRate.value - a.metrics.replyRate.value;
+    const arr = a.metrics.replyRate ? a.metrics.replyRate.value : 0;
+    const brr = b.metrics.replyRate ? b.metrics.replyRate.value : 0;
+    return brr - arr;
   });
 
   let html = `<div class="view">
@@ -696,21 +795,28 @@ function renderOverall() {
       <div class="panel-sub">Sorted by RFQ received, then reply rate</div>
       <table class="agg-table">
         <thead><tr>
-          <th>#</th><th>Campaign</th><th>Tag</th><th>Stage</th>
+          <th>#</th><th>Campaign</th><th>Type</th><th>Tag</th><th>Stage</th>
           <th class="num">Sent</th><th class="num">Replies</th>
           <th class="num">Reply %</th><th class="num">RFQs</th>
         </tr></thead>
-        <tbody>${ranked.map((c, i) => `
-          <tr>
+        <tbody>${ranked.map((c, i) => {
+          const isLI = c.type === 'linkedin';
+          const sent = isLI ? (c.metrics.connectionSent ? c.metrics.connectionSent.value : 0) : c.metrics.sent.value;
+          const replies = c.metrics.replies ? c.metrics.replies.value : 0;
+          const replyRate = c.metrics.replyRate ? c.metrics.replyRate.value : 0;
+          const rfq = c.metrics.rfqReceived ? c.metrics.rfqReceived.value : 0;
+          return `<tr>
             <td style="color:var(--text-dim);font-family:var(--mono)">${i + 1}</td>
             <td>${escapeHtml(c.name)}</td>
+            <td><span class="campaign-tag type-${c.type || 'email'}">${(c.type || 'email') === 'linkedin' ? 'LinkedIn' : 'Email'}</span></td>
             <td>${c.tag ? `<span class="campaign-tag tag-${c.tag.toLowerCase().replace(/[^a-z]/g,'')}">${escapeHtml(c.tag)}</span>` : '—'}</td>
             <td><span class="stage-dot ${c.stage}" style="display:inline-block;margin-right:6px;vertical-align:middle"></span>${STAGES.find(s => s.id === c.stage).label}</td>
-            <td class="num">${c.metrics.sent.value}</td>
-            <td class="num">${c.metrics.replies.value}</td>
-            <td class="num rate-cell">${c.metrics.replyRate.value}%</td>
-            <td class="num rfq-cell">${c.metrics.rfqReceived.value}</td>
-          </tr>`).join('')}
+            <td class="num">${sent}</td>
+            <td class="num">${replies}</td>
+            <td class="num rate-cell">${replyRate}%</td>
+            <td class="num rfq-cell">${rfq}</td>
+          </tr>`;
+        }).join('')}
         </tbody>
       </table>
     </div>
@@ -796,8 +902,8 @@ function renderManage() {
 
     <div class="panel">
       <h3>Import from <em>report text</em></h3>
-      <div class="panel-sub">Paste a daily report → updates matching campaigns, adds new ones</div>
-      <textarea class="paste-area" id="pasteArea" placeholder="Email outreach -PREV- ...&#10;Contacts: 34 (+0)&#10;..."></textarea>
+      <div class="panel-sub">Paste Email or LinkedIn report → updates matching campaigns, adds new ones</div>
+      <textarea class="paste-area" id="pasteArea" placeholder="Email outreach -PREV- Campaign Name&#10;Contacts: 34 (+0)&#10;Sent: 28 (+0)&#10;Replies: 4 (+1)&#10;Reply Rate: 14.3% (+1.2%)&#10;RFQ Received: 1 (+0)&#10;&#10;LinkedIn outreach - RADII-X - GPR LinkedIn&#10;Connection Sent: 50 (+5)&#10;Connect Accepted: 12 (+2)&#10;Accept Rate: 24% (+1%)&#10;Followed: 4 (+1)&#10;Replies: 1 (+0)"></textarea>
       <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap">
         <button class="primary" id="importBtn">Parse & merge</button>
         <button class="ghost" id="clearPasteBtn">Clear</button>
@@ -831,7 +937,8 @@ function renderManage() {
 }
 
 function renderEditorCard(c) {
-  const metricInputs = METRICS.map(def => `
+  const metricsForType = getMetricsForType(c.type);
+  const metricInputs = metricsForType.map(def => `
     <div class="editor-metric">
       <span class="label">${def.label}</span>
       <input type="number" step="any" data-id="${c.id}" data-field="metrics.${def.key}.value" value="${c.metrics[def.key].value}" />
@@ -842,6 +949,9 @@ function renderEditorCard(c) {
     <div class="editor-header">
       <input class="name-input" type="text" data-id="${c.id}" data-field="name" value="${escapeAttr(c.name)}" placeholder="Campaign name" />
       <input type="text" data-id="${c.id}" data-field="tag" value="${escapeAttr(c.tag)}" placeholder="TAG" />
+      <select data-id="${c.id}" data-field="type">
+        ${CAMPAIGN_TYPES.map(t => `<option value="${t.id}" ${c.type === t.id ? 'selected' : ''}>${t.label}</option>`).join('')}
+      </select>
       <select data-id="${c.id}" data-field="stage">
         ${STAGES.map(s => `<option value="${s.id}" ${c.stage === s.id ? 'selected' : ''}>${s.label}</option>`).join('')}
       </select>
@@ -882,7 +992,10 @@ function attachHandlers() {
 
   const addBtn = document.getElementById('addBtn');
   if (addBtn) addBtn.onclick = () => {
-    state.data.campaigns.unshift(ensureMetrics({ id: uid(), name: 'New campaign', tag: '', stage: 'active', metrics: emptyMetrics() }));
+    const newCamp = ensureMetrics({
+      id: uid(), name: 'New campaign', tag: '', type: 'email', stage: 'active', metrics: {}
+    });
+    state.data.campaigns.unshift(newCamp);
     saveLocal(); render();
     setTimeout(() => {
       const first = document.querySelector('.editor-card input.name-input');
@@ -965,12 +1078,15 @@ function handleInlineEdit(e) {
   for (let i = 0; i < parts.length - 1; i++) obj = obj[parts[i]];
   obj[parts[parts.length - 1]] = value;
 
+  // If type changed, ensure new metrics are added
+  if (field === 'type') ensureMetrics(c);
+
   state.saveStatus = 'unsaved';
   updateFooter();
   clearTimeout(editDebounce);
   editDebounce = setTimeout(() => {
     saveLocal();
-    if (field === 'stage') render();
+    if (field === 'stage' || field === 'type') render();
   }, 400);
 }
 
