@@ -1,6 +1,6 @@
 window.appData = {
-  "lastUpdated": "2026-06-02T08:43:41.884Z",
-  "reportDate": "2026-06-02",
+  "lastUpdated": "2026-06-03T08:38:07.453Z",
+  "reportDate": "2026-06-03",
   "campaigns": [
     {
       "id": "cepx6kq39",
@@ -424,23 +424,23 @@ window.appData = {
       "metrics": {
         "contacts": {
           "value": 155,
-          "delta": 10
+          "delta": 0
         },
         "notAddedToSequence": {
           "value": 0,
-          "delta": -10
+          "delta": 0
         },
         "inbox": {
           "value": 155,
-          "delta": 10
+          "delta": 0
         },
         "sent": {
           "value": 155,
-          "delta": 10
+          "delta": 0
         },
         "delivered": {
           "value": 146,
-          "delta": 10
+          "delta": 0
         },
         "bounced": {
           "value": 3,
@@ -456,7 +456,7 @@ window.appData = {
         },
         "replyRate": {
           "value": 5.4,
-          "delta": -0.4
+          "delta": 0
         },
         "rfqReceived": {
           "value": 7,
@@ -468,7 +468,7 @@ window.appData = {
         }
       },
       "id": "ccxu2ja4s",
-      "stage": "active"
+      "stage": "followup"
     }
   ]
 };
