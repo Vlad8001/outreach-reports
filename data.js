@@ -1,5 +1,5 @@
 window.appData = {
-  "lastUpdated": "2026-06-04T07:37:01.053Z",
+  "lastUpdated": "2026-06-04T07:45:52.410Z",
   "reportDate": "2026-06-04",
   "campaigns": [
     {
@@ -43,27 +43,27 @@ window.appData = {
         },
         "replies": {
           "value": 9,
-          "delta": 9
+          "delta": 0
         },
         "replyRate": {
           "value": 23,
-          "delta": 23
+          "delta": 0
         },
         "rfqReceived": {
           "value": 2,
           "delta": 0
         },
         "connectionSent": {
-          "value": 39,
-          "delta": 39
+          "value": 49,
+          "delta": 10
         },
         "connectAccepted": {
           "value": 9,
-          "delta": 9
+          "delta": 0
         },
         "acceptRate": {
           "value": 23,
-          "delta": 23
+          "delta": 0
         },
         "followed": {
           "value": 164,
