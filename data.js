@@ -1,6 +1,6 @@
 window.appData = {
-  "lastUpdated": "2026-06-05T13:24:21.683Z",
-  "reportDate": "2026-06-05",
+  "lastUpdated": "2026-06-08T06:59:59.615Z",
+  "reportDate": "2026-06-08",
   "campaigns": [
     {
       "id": "cn97tqf5z",
@@ -42,28 +42,28 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 9,
-          "delta": 0
+          "value": 11,
+          "delta": 2
         },
         "replyRate": {
           "value": 15.2,
-          "delta": -7.8
+          "delta": 0.7
         },
         "rfqReceived": {
-          "value": 3,
+          "value": 4,
           "delta": 1
         },
         "connectionSent": {
-          "value": 59,
+          "value": 69,
           "delta": 10
         },
         "connectAccepted": {
-          "value": 9,
-          "delta": 0
+          "value": 11,
+          "delta": 2
         },
         "acceptRate": {
-          "value": 15.2,
-          "delta": -7.8
+          "value": 15.9,
+          "delta": 0.7
         },
         "followed": {
           "value": 164,
@@ -313,7 +313,7 @@ window.appData = {
         },
         "replies": {
           "value": 15,
-          "delta": 8
+          "delta": 0
         },
         "spamBlocked": {
           "value": 1,
@@ -321,7 +321,7 @@ window.appData = {
         },
         "replyRate": {
           "value": 19.4,
-          "delta": 11.5
+          "delta": 0
         },
         "rfqReceived": {
           "value": 4,
@@ -427,11 +427,11 @@ window.appData = {
         },
         "replies": {
           "value": 3,
-          "delta": 1
+          "delta": 0
         },
         "replyRate": {
           "value": 4.1,
-          "delta": 1.9
+          "delta": 0
         },
         "rfqReceived": {
           "value": 2,
