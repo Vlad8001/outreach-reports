@@ -1,6 +1,6 @@
 window.appData = {
-  "lastUpdated": "2026-06-08T06:59:59.615Z",
-  "reportDate": "2026-06-08",
+  "lastUpdated": "2026-06-09T09:07:52.787Z",
+  "reportDate": "2026-06-09",
   "campaigns": [
     {
       "id": "cn97tqf5z",
@@ -42,28 +42,28 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 11,
+          "value": 13,
           "delta": 2
         },
         "replyRate": {
-          "value": 15.2,
-          "delta": 0.7
+          "value": 16.4,
+          "delta": 1.2
         },
         "rfqReceived": {
           "value": 4,
-          "delta": 1
+          "delta": 0
         },
         "connectionSent": {
-          "value": 69,
+          "value": 79,
           "delta": 10
         },
         "connectAccepted": {
-          "value": 11,
+          "value": 13,
           "delta": 2
         },
         "acceptRate": {
-          "value": 15.9,
-          "delta": 0.7
+          "value": 16.4,
+          "delta": 1.2
         },
         "followed": {
           "value": 164,
@@ -164,11 +164,11 @@ window.appData = {
         },
         "replies": {
           "value": 2,
-          "delta": 1
+          "delta": 0
         },
         "replyRate": {
           "value": 4.3,
-          "delta": 2.2
+          "delta": 0
         },
         "rfqReceived": {
           "value": 0,
@@ -435,7 +435,7 @@ window.appData = {
         },
         "rfqReceived": {
           "value": 2,
-          "delta": 1
+          "delta": 0
         }
       },
       "id": "cfw4uqya6",
@@ -472,15 +472,15 @@ window.appData = {
         },
         "replies": {
           "value": 4,
-          "delta": 1
+          "delta": 0
         },
         "replyRate": {
           "value": 6.3,
-          "delta": 1.5
+          "delta": 0
         },
         "rfqReceived": {
           "value": 2,
-          "delta": 1
+          "delta": 0
         },
         "spamBlocked": {
           "value": 0,
@@ -528,16 +528,16 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 9,
+          "value": 10,
           "delta": 1
         },
         "replyRate": {
-          "value": 6.1,
+          "value": 6.8,
           "delta": 0.7
         },
         "rfqReceived": {
           "value": 8,
-          "delta": 1
+          "delta": 0
         },
         "spamBlocked": {
           "value": 4,
