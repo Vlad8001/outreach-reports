@@ -1,5 +1,5 @@
 window.appData = {
-  "lastUpdated": "2026-06-09T09:07:52.787Z",
+  "lastUpdated": "2026-06-09T14:21:49.835Z",
   "reportDate": "2026-06-09",
   "campaigns": [
     {
@@ -18,7 +18,7 @@ window.appData = {
           "delta": 0
         },
         "inbox": {
-          "value": 164,
+          "value": 163,
           "delta": 0
         },
         "sent": {
@@ -66,7 +66,7 @@ window.appData = {
           "delta": 1.2
         },
         "followed": {
-          "value": 164,
+          "value": 163,
           "delta": 0
         }
       }
