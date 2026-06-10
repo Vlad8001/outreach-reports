@@ -423,7 +423,11 @@ function updateFooter() {
   const el = document.getElementById('lastSync');
   if (el) {
     el.textContent = lastSync
-      ? new Date(lastSync).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' })
+      ? new Date(lastSync).toLocaleString('en-GB', {
+          dateStyle: 'medium',
+          timeStyle: 'short',
+          timeZone: 'America/Los_Angeles'
+        }) + ' PT'
       : 'never';
   }
   const ss = document.getElementById('saveStatus');
