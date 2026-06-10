@@ -332,7 +332,7 @@ const LS_SETTINGS = 'outreachSettings_v2';
    STATE
 ============================================================ */
 const state = {
-  data: { lastUpdated: '', reportDate: '', campaigns: [] },
+  data: { lastUpdated: '', lastSync: '', reportDate: '', campaigns: [] },
   view: 'daily',
   ghToken: '',
   ghRepo: '',
@@ -357,10 +357,11 @@ function ensureMetrics(c) {
 }
 
 function migrate(json) {
-  if (!json) return { lastUpdated: '', reportDate: '', campaigns: [] };
+  if (!json) return { lastUpdated: '', lastSync: '', reportDate: '', campaigns: [] };
   if (Array.isArray(json.campaigns)) {
     return {
       lastUpdated: json.lastUpdated || '',
+      lastSync: json.lastSync || '',
       reportDate: json.reportDate || '',
       campaigns: json.campaigns.map(ensureMetrics)
     };
@@ -370,11 +371,12 @@ function migrate(json) {
     const latest = json.reports[0];
     return {
       lastUpdated: json.lastUpdated || '',
+      lastSync: json.lastSync || '',
       reportDate: latest.date || '',
       campaigns: (latest.campaigns || []).map(ensureMetrics)
     };
   }
-  return { lastUpdated: '', reportDate: '', campaigns: [] };
+  return { lastUpdated: '', lastSync: '', reportDate: '', campaigns: [] };
 }
 
 function loadData() {
@@ -395,7 +397,7 @@ function loadData() {
     const rt = remote.lastUpdated || '';
     state.data = (rt > lt) ? remote : local;
   } else {
-    state.data = local || remote || { lastUpdated: '', reportDate: '', campaigns: [] };
+    state.data = local || remote || { lastUpdated: '', lastSync: '', reportDate: '', campaigns: [] };
   }
 
   updateFooter();
@@ -417,10 +419,12 @@ function saveSettings() {
 }
 
 function updateFooter() {
-  const lastSync = localStorage.getItem('lastSyncTime');
+  const lastSync = state.data.lastSync || localStorage.getItem('lastSyncTime');
   const el = document.getElementById('lastSync');
   if (el) {
-    el.textContent = lastSync ? new Date(lastSync).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' }) : 'never';
+    el.textContent = lastSync
+      ? new Date(lastSync).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' })
+      : 'never';
   }
   const ss = document.getElementById('saveStatus');
   if (ss) {
@@ -460,6 +464,9 @@ async function syncToGitHub() {
     if (r.ok) { const d = await r.json(); sha = d.sha; }
   } catch (e) {}
 
+  // Stamp the sync time into the data itself so other devices see it
+  state.data.lastSync = new Date().toISOString();
+
   const content = 'window.appData = ' + JSON.stringify(state.data, null, 2) + ';\n';
   const b64 = btoa(unescape(encodeURIComponent(content)));
 
@@ -473,7 +480,7 @@ async function syncToGitHub() {
   try {
     const res = await fetch(apiUrl, { method: 'PUT', headers, body: JSON.stringify(body) });
     if (res.ok) {
-      localStorage.setItem('lastSyncTime', new Date().toISOString());
+      saveLocal();
       updateFooter();
       toast('Synced! GitHub Pages rebuild ~30s', 'success');
     } else {
@@ -1017,7 +1024,7 @@ function attachHandlers() {
   const resetBtn = document.getElementById('resetBtn');
   if (resetBtn) resetBtn.onclick = () => {
     if (!confirm('Erase ALL campaigns from local storage? You can restore from data.js by reloading after clearing.')) return;
-    state.data = { lastUpdated: '', reportDate: '', campaigns: [] };
+    state.data = { lastUpdated: '', lastSync: '', reportDate: '', campaigns: [] };
     saveLocal(); render();
   };
 
