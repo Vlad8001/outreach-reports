@@ -277,6 +277,7 @@ const METRICS_BY_TYPE = {
   linkedin: [
     { key: 'inbox',              label: 'Inbox' },
     { key: 'connectionSent',     label: 'Connection Sent' },
+    { key: 'inmailSent',         label: 'InMail Sent' },
     { key: 'connectAccepted',    label: 'Connect Accepted' },
     { key: 'acceptRate',         label: 'Accept Rate', suffix: '%' },
     { key: 'followed',           label: 'Followed' },
@@ -302,7 +303,8 @@ const METRICS = [
   { key: 'connectionSent',     label: 'Connection Sent' },
   { key: 'connectAccepted',    label: 'Connect Accepted' },
   { key: 'acceptRate',         label: 'Accept Rate', suffix: '%' },
-  { key: 'followed',           label: 'Followed' }
+  { key: 'followed',           label: 'Followed' },
+  { key: 'inmailSent',         label: 'InMail Sent' }
 ];
 
 const ALIAS = {
@@ -318,7 +320,8 @@ const ALIAS = {
   'connection sent': 'connectionSent', 'connections sent': 'connectionSent',
   'connect accepted': 'connectAccepted', 'connection accepted': 'connectAccepted',
   'accept rate': 'acceptRate', 'acceptance rate': 'acceptRate',
-  'followed': 'followed', 'follows': 'followed'
+  'followed': 'followed', 'follows': 'followed',
+  'inmail sent': 'inmailSent', 'inmails sent': 'inmailSent', 'inmail': 'inmailSent', 'inmails': 'inmailSent'
 };
 
 function getMetricsForType(type) {
@@ -506,14 +509,14 @@ function parseReport(text) {
   const parsed = [];
 
   for (const block of blocks) {
-    const headerEndIdx = block.search(/\n?\s*(Contacts|Inbox|Sent|Delivered|Bounced|Spam|Replies|Not added|Connection|Connect|Followed|Accept)\s*:/i);
+    const headerEndIdx = block.search(/\n?\s*(Contacts|Inbox|Sent|Delivered|Bounced|Spam|Replies|Not added|Connection|Connect|Followed|Accept|InMail|Inmail)\s*:/i);
     if (headerEndIdx < 0) continue;
     const headerRaw = block.slice(0, headerEndIdx).trim();
     const rest = block.slice(headerEndIdx);
 
     // Detect type by header keyword OR by linkedin-specific metric in body
     const linkedinByHeader = /LinkedIn/i.test(headerRaw);
-    const linkedinByMetrics = /\b(Connect(ion)?\s+Accepted|Connection\s+Sent|Followed)\s*:/i.test(rest);
+    const linkedinByMetrics = /\b(Connect(ion)?\s+Accepted|Connection\s+Sent|Followed|InMail|Inmail)\s*:/i.test(rest);
     const type = (linkedinByHeader || linkedinByMetrics) ? 'linkedin' : 'email';
 
     let cleanHeader = headerRaw
@@ -678,7 +681,7 @@ function renderCampaignCard(c) {
 
   // Detail rows — only keys relevant to this type
   const detailKeys = isLI
-    ? ['inbox','connectionSent','connectAccepted','followed','replies','replyRate']
+    ? ['inbox','connectionSent','inmailSent','connectAccepted','followed','replies','replyRate']
     : ['contacts','sent','delivered','inbox','bounced','spamBlocked','badData','notAddedToSequence','replies'];
 
   const detailHtml = detailKeys.filter(k => m[k]).map(k => {
@@ -914,7 +917,7 @@ function renderManage() {
     <div class="panel">
       <h3>Import from <em>report text</em></h3>
       <div class="panel-sub">Paste Email or LinkedIn report → updates matching campaigns, adds new ones</div>
-      <textarea class="paste-area" id="pasteArea" placeholder="Email outreach -PREV- Campaign Name&#10;Contacts: 34 (+0)&#10;Sent: 28 (+0)&#10;Replies: 4 (+1)&#10;Reply Rate: 14.3% (+1.2%)&#10;RFQ Received: 1 (+0)&#10;&#10;LinkedIn outreach - RADII-X - GPR LinkedIn&#10;Connection Sent: 50 (+5)&#10;Connect Accepted: 12 (+2)&#10;Accept Rate: 24% (+1%)&#10;Followed: 4 (+1)&#10;Replies: 1 (+0)"></textarea>
+      <textarea class="paste-area" id="pasteArea" placeholder="Email outreach -PREV- Campaign Name&#10;Contacts: 34 (+0)&#10;Sent: 28 (+0)&#10;Replies: 4 (+1)&#10;Reply Rate: 14.3% (+1.2%)&#10;RFQ Received: 1 (+0)&#10;&#10;LinkedIn outreach - RADII-X - GPR LinkedIn&#10;Connection Sent: 50 (+5)&#10;InMail Sent: 12 (+3)&#10;Connect Accepted: 12 (+2)&#10;Accept Rate: 24% (+1%)&#10;Followed: 4 (+1)&#10;Replies: 1 (+0)"></textarea>
       <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap">
         <button class="primary" id="importBtn">Parse & merge</button>
         <button class="ghost" id="clearPasteBtn">Clear</button>
