@@ -1,7 +1,7 @@
 window.appData = {
-  "lastUpdated": "2026-06-10T14:31:08.137Z",
-  "lastSync": "2026-06-10T19:20:45.360Z",
-  "reportDate": "2026-06-10",
+  "lastUpdated": "2026-06-11T06:19:48.614Z",
+  "lastSync": "2026-06-11T08:39:59.800Z",
+  "reportDate": "2026-06-11",
   "campaigns": [
     {
       "id": "cn97tqf5z",
@@ -43,31 +43,35 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 15,
-          "delta": 2
+          "value": 16,
+          "delta": 1
         },
         "replyRate": {
-          "value": 16.8,
-          "delta": 0.4
+          "value": 16.2,
+          "delta": -0.6
         },
         "rfqReceived": {
           "value": 4,
           "delta": 0
         },
         "connectionSent": {
-          "value": 89,
+          "value": 99,
           "delta": 10
         },
         "connectAccepted": {
-          "value": 15,
-          "delta": 2
+          "value": 16,
+          "delta": 1
         },
         "acceptRate": {
-          "value": 16.8,
-          "delta": 0.4
+          "value": 16.2,
+          "delta": -0.6
         },
         "followed": {
           "value": 162,
+          "delta": 0
+        },
+        "inmailSent": {
+          "value": 0,
           "delta": 0
         }
       }
