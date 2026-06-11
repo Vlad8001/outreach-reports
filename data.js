@@ -1,8 +1,61 @@
 window.appData = {
-  "lastUpdated": "2026-06-11T06:19:48.614Z",
-  "lastSync": "2026-06-11T08:39:59.800Z",
+  "lastUpdated": "2026-06-11T11:13:52.053Z",
+  "lastSync": "2026-06-11T11:13:56.221Z",
   "reportDate": "2026-06-11",
   "campaigns": [
+    {
+      "id": "ccdya7zce",
+      "name": "RADII-X - Top-management GPR prospects",
+      "tag": "Radii-x",
+      "type": "email",
+      "stage": "active",
+      "metrics": {
+        "contacts": {
+          "value": 0,
+          "delta": 0
+        },
+        "notAddedToSequence": {
+          "value": 0,
+          "delta": 0
+        },
+        "inbox": {
+          "value": 0,
+          "delta": 0
+        },
+        "sent": {
+          "value": 0,
+          "delta": 0
+        },
+        "delivered": {
+          "value": 0,
+          "delta": 0
+        },
+        "bounced": {
+          "value": 0,
+          "delta": 0
+        },
+        "spamBlocked": {
+          "value": 0,
+          "delta": 0
+        },
+        "badData": {
+          "value": 0,
+          "delta": 0
+        },
+        "replies": {
+          "value": 0,
+          "delta": 0
+        },
+        "replyRate": {
+          "value": 0,
+          "delta": 0
+        },
+        "rfqReceived": {
+          "value": 0,
+          "delta": 0
+        }
+      }
+    },
     {
       "id": "cn97tqf5z",
       "name": "GPR Radii-x LinkedIn",
