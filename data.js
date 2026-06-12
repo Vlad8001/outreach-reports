@@ -1,7 +1,7 @@
 window.appData = {
-  "lastUpdated": "2026-06-11T11:13:52.053Z",
-  "lastSync": "2026-06-11T11:13:56.221Z",
-  "reportDate": "2026-06-11",
+  "lastUpdated": "2026-06-12T12:35:40.922Z",
+  "lastSync": "2026-06-12T12:35:45.234Z",
+  "reportDate": "2026-06-12",
   "campaigns": [
     {
       "id": "ccdya7zce",
@@ -11,28 +11,28 @@ window.appData = {
       "stage": "active",
       "metrics": {
         "contacts": {
-          "value": 0,
-          "delta": 0
+          "value": 10,
+          "delta": 10
         },
         "notAddedToSequence": {
           "value": 0,
-          "delta": 0
+          "delta": -10
         },
         "inbox": {
-          "value": 0,
-          "delta": 0
+          "value": 10,
+          "delta": 10
         },
         "sent": {
-          "value": 0,
-          "delta": 0
+          "value": 10,
+          "delta": 10
         },
         "delivered": {
-          "value": 0,
-          "delta": 0
+          "value": 9,
+          "delta": 9
         },
         "bounced": {
-          "value": 0,
-          "delta": 0
+          "value": 1,
+          "delta": 1
         },
         "spamBlocked": {
           "value": 0,
@@ -43,16 +43,16 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 0,
-          "delta": 0
+          "value": 1,
+          "delta": 1
         },
         "replyRate": {
-          "value": 0,
-          "delta": 0
+          "value": 11.1,
+          "delta": 11.1
         },
         "rfqReceived": {
-          "value": 0,
-          "delta": 0
+          "value": 1,
+          "delta": 1
         }
       }
     },
@@ -96,36 +96,36 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 16,
-          "delta": 1
+          "value": 18,
+          "delta": 2
         },
         "replyRate": {
-          "value": 16.2,
-          "delta": -0.6
+          "value": 16.5,
+          "delta": 0.3
         },
         "rfqReceived": {
           "value": 4,
           "delta": 0
         },
         "connectionSent": {
-          "value": 99,
+          "value": 109,
           "delta": 10
         },
         "connectAccepted": {
-          "value": 16,
-          "delta": 1
+          "value": 18,
+          "delta": 2
         },
         "acceptRate": {
-          "value": 16.2,
-          "delta": -0.6
+          "value": 16.5,
+          "delta": 0.3
         },
         "followed": {
           "value": 162,
           "delta": 0
         },
         "inmailSent": {
-          "value": 0,
-          "delta": 0
+          "value": 10,
+          "delta": 10
         }
       }
     },
@@ -586,12 +586,12 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 10,
-          "delta": 0
+          "value": 11,
+          "delta": 1
         },
         "replyRate": {
-          "value": 6.8,
-          "delta": 0
+          "value": 7.5,
+          "delta": 0.7
         },
         "rfqReceived": {
           "value": 8,
