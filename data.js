@@ -1,7 +1,7 @@
 window.appData = {
-  "lastUpdated": "2026-06-12T12:35:40.922Z",
-  "lastSync": "2026-06-12T12:35:45.234Z",
-  "reportDate": "2026-06-12",
+  "lastUpdated": "2026-06-15T14:06:26.011Z",
+  "lastSync": "2026-06-15T14:06:34.661Z",
+  "reportDate": "2026-06-15",
   "campaigns": [
     {
       "id": "ccdya7zce",
@@ -11,32 +11,32 @@ window.appData = {
       "stage": "active",
       "metrics": {
         "contacts": {
-          "value": 10,
-          "delta": 10
+          "value": 20,
+          "delta": 20
         },
         "notAddedToSequence": {
           "value": 0,
           "delta": -10
         },
         "inbox": {
-          "value": 10,
+          "value": 20,
           "delta": 10
         },
         "sent": {
-          "value": 10,
+          "value": 20,
           "delta": 10
         },
         "delivered": {
-          "value": 9,
-          "delta": 9
+          "value": 15,
+          "delta": 6
         },
         "bounced": {
-          "value": 1,
-          "delta": 1
+          "value": 3,
+          "delta": 2
         },
         "spamBlocked": {
-          "value": 0,
-          "delta": 0
+          "value": 2,
+          "delta": 2
         },
         "badData": {
           "value": 0,
@@ -44,15 +44,15 @@ window.appData = {
         },
         "replies": {
           "value": 1,
-          "delta": 1
+          "delta": 0
         },
         "replyRate": {
-          "value": 11.1,
-          "delta": 11.1
+          "value": 6.7,
+          "delta": -4.4
         },
         "rfqReceived": {
           "value": 1,
-          "delta": 1
+          "delta": 0
         }
       }
     },
@@ -96,27 +96,27 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 18,
+          "value": 20,
           "delta": 2
         },
         "replyRate": {
-          "value": 16.5,
+          "value": 16.8,
           "delta": 0.3
         },
         "rfqReceived": {
-          "value": 4,
-          "delta": 0
+          "value": 5,
+          "delta": 1
         },
         "connectionSent": {
-          "value": 109,
+          "value": 119,
           "delta": 10
         },
         "connectAccepted": {
-          "value": 18,
+          "value": 20,
           "delta": 2
         },
         "acceptRate": {
-          "value": 16.5,
+          "value": 16.8,
           "delta": 0.3
         },
         "followed": {
@@ -124,7 +124,7 @@ window.appData = {
           "delta": 0
         },
         "inmailSent": {
-          "value": 10,
+          "value": 20,
           "delta": 10
         }
       }
