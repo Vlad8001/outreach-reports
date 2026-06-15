@@ -1,12 +1,12 @@
 window.appData = {
-  "lastUpdated": "2026-06-15T15:39:25.916Z",
-  "lastSync": "2026-06-15T15:39:39.687Z",
+  "lastUpdated": "2026-06-15T19:21:37.556Z",
+  "lastSync": "2026-06-15T19:21:41.604Z",
   "reportDate": "2026-06-15",
   "campaigns": [
     {
       "id": "ccdya7zce",
-      "name": "RADII-X - Top-management GPR prospects",
-      "tag": "Radii-x",
+      "name": "RADII-X - Management GPR prospects",
+      "tag": "Email",
       "type": "email",
       "stage": "active",
       "metrics": {
@@ -58,7 +58,7 @@ window.appData = {
     },
     {
       "id": "cn97tqf5z",
-      "name": "GPR Radii-x LinkedIn",
+      "name": "RADII-X GPR Prospects LinkedIn ",
       "tag": "Radii-x LinkedIn",
       "type": "linkedin",
       "stage": "active",
@@ -100,7 +100,7 @@ window.appData = {
           "delta": 2
         },
         "replyRate": {
-          "value": 16.8,
+          "value": 18.3,
           "delta": 0.3
         },
         "rfqReceived": {
@@ -116,7 +116,7 @@ window.appData = {
           "delta": 2
         },
         "acceptRate": {
-          "value": 16.8,
+          "value": 18.3,
           "delta": 0.3
         },
         "followed": {
