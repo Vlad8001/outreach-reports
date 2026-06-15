@@ -1,6 +1,6 @@
 window.appData = {
-  "lastUpdated": "2026-06-15T14:06:26.011Z",
-  "lastSync": "2026-06-15T14:06:34.661Z",
+  "lastUpdated": "2026-06-15T15:39:25.916Z",
+  "lastSync": "2026-06-15T15:39:39.687Z",
   "reportDate": "2026-06-15",
   "campaigns": [
     {
@@ -72,7 +72,7 @@ window.appData = {
           "delta": 0
         },
         "inbox": {
-          "value": 162,
+          "value": 121,
           "delta": 0
         },
         "sent": {
@@ -108,7 +108,7 @@ window.appData = {
           "delta": 1
         },
         "connectionSent": {
-          "value": 119,
+          "value": 109,
           "delta": 10
         },
         "connectAccepted": {
@@ -120,7 +120,7 @@ window.appData = {
           "delta": 0.3
         },
         "followed": {
-          "value": 162,
+          "value": 121,
           "delta": 0
         },
         "inmailSent": {
