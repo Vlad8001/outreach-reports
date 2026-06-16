@@ -1,6 +1,6 @@
 window.appData = {
-  "lastUpdated": "2026-06-15T19:21:37.556Z",
-  "lastSync": "2026-06-15T19:21:41.604Z",
+  "lastUpdated": "2026-06-16T07:52:19.726Z",
+  "lastSync": "2026-06-16T07:52:35.921Z",
   "reportDate": "2026-06-15",
   "campaigns": [
     {
@@ -11,27 +11,27 @@ window.appData = {
       "stage": "active",
       "metrics": {
         "contacts": {
-          "value": 20,
-          "delta": 20
+          "value": 30,
+          "delta": 10
         },
         "notAddedToSequence": {
           "value": 0,
           "delta": -10
         },
         "inbox": {
-          "value": 20,
+          "value": 30,
           "delta": 10
         },
         "sent": {
-          "value": 20,
+          "value": 30,
           "delta": 10
         },
         "delivered": {
-          "value": 15,
-          "delta": 6
+          "value": 23,
+          "delta": 8
         },
         "bounced": {
-          "value": 3,
+          "value": 5,
           "delta": 2
         },
         "spamBlocked": {
@@ -47,8 +47,8 @@ window.appData = {
           "delta": 0
         },
         "replyRate": {
-          "value": 6.7,
-          "delta": -4.4
+          "value": 4.3,
+          "delta": -2.4
         },
         "rfqReceived": {
           "value": 1,
@@ -96,35 +96,35 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 20,
+          "value": 22,
           "delta": 2
         },
         "replyRate": {
-          "value": 18.3,
-          "delta": 0.3
+          "value": 18.5,
+          "delta": 0.2
         },
         "rfqReceived": {
           "value": 5,
-          "delta": 1
+          "delta": 0
         },
         "connectionSent": {
-          "value": 109,
+          "value": 119,
           "delta": 10
         },
         "connectAccepted": {
-          "value": 20,
+          "value": 22,
           "delta": 2
         },
         "acceptRate": {
-          "value": 18.3,
-          "delta": 0.3
+          "value": 18.5,
+          "delta": 0.2
         },
         "followed": {
           "value": 121,
           "delta": 0
         },
         "inmailSent": {
-          "value": 20,
+          "value": 30,
           "delta": 10
         }
       }
