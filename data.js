@@ -1,7 +1,7 @@
 window.appData = {
-  "lastUpdated": "2026-06-16T07:52:19.726Z",
-  "lastSync": "2026-06-16T07:52:35.921Z",
-  "reportDate": "2026-06-15",
+  "lastUpdated": "2026-06-16T07:52:41.385Z",
+  "lastSync": "2026-06-16T07:53:26.229Z",
+  "reportDate": "2026-06-16",
   "campaigns": [
     {
       "id": "ccdya7zce",
