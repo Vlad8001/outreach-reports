@@ -1,6 +1,6 @@
 window.appData = {
-  "lastUpdated": "2026-06-16T07:52:41.385Z",
-  "lastSync": "2026-06-16T07:53:26.229Z",
+  "lastUpdated": "2026-06-16T07:56:50.635Z",
+  "lastSync": "2026-06-16T07:56:56.951Z",
   "reportDate": "2026-06-16",
   "campaigns": [
     {
@@ -108,8 +108,8 @@ window.appData = {
           "delta": 0
         },
         "connectionSent": {
-          "value": 119,
-          "delta": 10
+          "value": 117,
+          "delta": 9
         },
         "connectAccepted": {
           "value": 22,
