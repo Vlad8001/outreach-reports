@@ -1,8 +1,61 @@
 window.appData = {
-  "lastUpdated": "2026-06-17T09:15:29.311Z",
-  "lastSync": "2026-06-17T09:18:48.699Z",
+  "lastUpdated": "2026-06-17T11:28:06.816Z",
+  "lastSync": "2026-06-17T11:29:41.877Z",
   "reportDate": "2026-06-17",
   "campaigns": [
+    {
+      "id": "cfe1w4yae",
+      "name": "NOVA TOR - A-Class Buildings (eng and construction)",
+      "tag": "Email",
+      "type": "email",
+      "stage": "active",
+      "metrics": {
+        "contacts": {
+          "value": 60,
+          "delta": 0
+        },
+        "notAddedToSequence": {
+          "value": 50,
+          "delta": -10
+        },
+        "inbox": {
+          "value": 10,
+          "delta": 10
+        },
+        "sent": {
+          "value": 10,
+          "delta": 10
+        },
+        "delivered": {
+          "value": 7,
+          "delta": 7
+        },
+        "bounced": {
+          "value": 1,
+          "delta": 1
+        },
+        "spamBlocked": {
+          "value": 0,
+          "delta": 0
+        },
+        "badData": {
+          "value": 0,
+          "delta": 0
+        },
+        "replies": {
+          "value": 0,
+          "delta": 0
+        },
+        "replyRate": {
+          "value": 0,
+          "delta": 0
+        },
+        "rfqReceived": {
+          "value": 0,
+          "delta": 0
+        }
+      }
+    },
     {
       "id": "ccdya7zce",
       "name": "RADII-X - Management GPR prospects",
