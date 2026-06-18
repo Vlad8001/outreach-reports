@@ -1,8 +1,81 @@
 window.appData = {
-  "lastUpdated": "2026-06-17T11:28:06.816Z",
-  "lastSync": "2026-06-17T11:29:41.877Z",
-  "reportDate": "2026-06-17",
+  "lastUpdated": "2026-06-18T11:40:37.004Z",
+  "lastSync": "2026-06-18T11:40:42.677Z",
+  "reportDate": "2026-06-18",
   "campaigns": [
+    {
+      "id": "cvizrjemq",
+      "name": "NOVA TOR - Commercial GC(Top management) LinkedIn",
+      "tag": "LinkedIn",
+      "type": "linkedin",
+      "stage": "active",
+      "metrics": {
+        "contacts": {
+          "value": 0,
+          "delta": 0
+        },
+        "notAddedToSequence": {
+          "value": 0,
+          "delta": 0
+        },
+        "inbox": {
+          "value": 94,
+          "delta": 0
+        },
+        "sent": {
+          "value": 0,
+          "delta": 0
+        },
+        "delivered": {
+          "value": 0,
+          "delta": 0
+        },
+        "bounced": {
+          "value": 0,
+          "delta": 0
+        },
+        "spamBlocked": {
+          "value": 0,
+          "delta": 0
+        },
+        "badData": {
+          "value": 0,
+          "delta": 0
+        },
+        "replies": {
+          "value": 1,
+          "delta": 1
+        },
+        "replyRate": {
+          "value": 10,
+          "delta": 10
+        },
+        "rfqReceived": {
+          "value": 0,
+          "delta": 0
+        },
+        "connectionSent": {
+          "value": 10,
+          "delta": 10
+        },
+        "inmailSent": {
+          "value": 0,
+          "delta": 0
+        },
+        "connectAccepted": {
+          "value": 1,
+          "delta": 1
+        },
+        "acceptRate": {
+          "value": 10,
+          "delta": 10
+        },
+        "followed": {
+          "value": 94,
+          "delta": 0
+        }
+      }
+    },
     {
       "id": "cfe1w4yae",
       "name": "NOVA TOR - A-Class Buildings (eng and construction)",
@@ -19,20 +92,20 @@ window.appData = {
           "delta": -10
         },
         "inbox": {
-          "value": 10,
+          "value": 20,
           "delta": 10
         },
         "sent": {
-          "value": 10,
+          "value": 20,
           "delta": 10
         },
         "delivered": {
-          "value": 7,
-          "delta": 7
+          "value": 19,
+          "delta": 12
         },
         "bounced": {
           "value": 1,
-          "delta": 1
+          "delta": 0
         },
         "spamBlocked": {
           "value": 0,
@@ -64,28 +137,28 @@ window.appData = {
       "stage": "active",
       "metrics": {
         "contacts": {
-          "value": 40,
-          "delta": 10
+          "value": 49,
+          "delta": 9
         },
         "notAddedToSequence": {
           "value": 0,
-          "delta": -10
+          "delta": -9
         },
         "inbox": {
-          "value": 40,
-          "delta": 10
+          "value": 49,
+          "delta": 9
         },
         "sent": {
-          "value": 40,
-          "delta": 10
+          "value": 49,
+          "delta": 9
         },
         "delivered": {
-          "value": 33,
-          "delta": 10
+          "value": 42,
+          "delta": 9
         },
         "bounced": {
           "value": 6,
-          "delta": 1
+          "delta": 0
         },
         "spamBlocked": {
           "value": 2,
@@ -100,8 +173,8 @@ window.appData = {
           "delta": 0
         },
         "replyRate": {
-          "value": 3,
-          "delta": -1.3
+          "value": 2.4,
+          "delta": -0.6
         },
         "rfqReceived": {
           "value": 1,
@@ -112,7 +185,7 @@ window.appData = {
     {
       "id": "cn97tqf5z",
       "name": "RADII-X GPR Prospects LinkedIn ",
-      "tag": "Radii-x LinkedIn",
+      "tag": "LinkedIn",
       "type": "linkedin",
       "stage": "active",
       "metrics": {
@@ -126,7 +199,7 @@ window.appData = {
         },
         "inbox": {
           "value": 123,
-          "delta": 2
+          "delta": 0
         },
         "sent": {
           "value": 0,
@@ -154,7 +227,7 @@ window.appData = {
         },
         "replyRate": {
           "value": 18.1,
-          "delta": -0.4
+          "delta": 0
         },
         "rfqReceived": {
           "value": 5,
@@ -162,7 +235,7 @@ window.appData = {
         },
         "connectionSent": {
           "value": 121,
-          "delta": 4
+          "delta": 0
         },
         "connectAccepted": {
           "value": 22,
@@ -170,11 +243,11 @@ window.appData = {
         },
         "acceptRate": {
           "value": 18.1,
-          "delta": -0.4
+          "delta": 0
         },
         "followed": {
           "value": 123,
-          "delta": 2
+          "delta": 0
         },
         "inmailSent": {
           "value": 40,
@@ -185,32 +258,32 @@ window.appData = {
     {
       "id": "cepx6kq39",
       "name": "NOVA TOR - Commercial GC(Top management)",
-      "tag": "GC(Top management) TOR",
-      "stage": "followup",
+      "tag": "Email",
+      "stage": "active",
       "metrics": {
         "contacts": {
-          "value": 54,
-          "delta": 0
+          "value": 64,
+          "delta": 10
         },
         "notAddedToSequence": {
           "value": 0,
-          "delta": 0
+          "delta": -10
         },
         "inbox": {
-          "value": 54,
-          "delta": 0
+          "value": 64,
+          "delta": 10
         },
         "sent": {
-          "value": 54,
-          "delta": 0
+          "value": 64,
+          "delta": 10
         },
         "delivered": {
-          "value": 51,
-          "delta": 0
+          "value": 57,
+          "delta": 6
         },
         "bounced": {
-          "value": 3,
-          "delta": 0
+          "value": 5,
+          "delta": 2
         },
         "spamBlocked": {
           "value": 0,
@@ -221,16 +294,16 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 1,
-          "delta": 0
+          "value": 2,
+          "delta": 1
         },
         "replyRate": {
-          "value": 2,
-          "delta": 0
+          "value": 3.5,
+          "delta": 1.5
         },
         "rfqReceived": {
-          "value": 0,
-          "delta": 0
+          "value": 1,
+          "delta": 1
         }
       },
       "type": "email"
