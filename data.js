@@ -1,7 +1,7 @@
 window.appData = {
-  "lastUpdated": "2026-06-18T11:40:37.004Z",
-  "lastSync": "2026-06-18T11:40:42.677Z",
-  "reportDate": "2026-06-18",
+  "lastUpdated": "2026-06-19T09:13:18.789Z",
+  "lastSync": "2026-06-19T09:13:22.304Z",
+  "reportDate": "2026-06-19",
   "campaigns": [
     {
       "id": "cvizrjemq",
@@ -19,8 +19,8 @@ window.appData = {
           "delta": 0
         },
         "inbox": {
-          "value": 94,
-          "delta": 0
+          "value": 125,
+          "delta": 21
         },
         "sent": {
           "value": 0,
@@ -43,11 +43,11 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 1,
-          "delta": 1
+          "value": 4,
+          "delta": 3
         },
         "replyRate": {
-          "value": 10,
+          "value": 20,
           "delta": 10
         },
         "rfqReceived": {
@@ -55,7 +55,7 @@ window.appData = {
           "delta": 0
         },
         "connectionSent": {
-          "value": 10,
+          "value": 20,
           "delta": 10
         },
         "inmailSent": {
@@ -63,16 +63,16 @@ window.appData = {
           "delta": 0
         },
         "connectAccepted": {
-          "value": 1,
-          "delta": 1
+          "value": 4,
+          "delta": 3
         },
         "acceptRate": {
-          "value": 10,
+          "value": 20,
           "delta": 10
         },
         "followed": {
-          "value": 94,
-          "delta": 0
+          "value": 125,
+          "delta": 21
         }
       }
     },
@@ -88,24 +88,24 @@ window.appData = {
           "delta": 0
         },
         "notAddedToSequence": {
-          "value": 50,
+          "value": 40,
           "delta": -10
         },
         "inbox": {
-          "value": 20,
+          "value": 30,
           "delta": 10
         },
         "sent": {
-          "value": 20,
+          "value": 30,
           "delta": 10
         },
         "delivered": {
-          "value": 19,
-          "delta": 12
+          "value": 27,
+          "delta": 8
         },
         "bounced": {
-          "value": 1,
-          "delta": 0
+          "value": 3,
+          "delta": 2
         },
         "spamBlocked": {
           "value": 0,
@@ -134,27 +134,27 @@ window.appData = {
       "name": "RADII-X - Management GPR prospects",
       "tag": "Email",
       "type": "email",
-      "stage": "active",
+      "stage": "followup",
       "metrics": {
         "contacts": {
           "value": 49,
-          "delta": 9
+          "delta": 0
         },
         "notAddedToSequence": {
           "value": 0,
-          "delta": -9
+          "delta": 0
         },
         "inbox": {
           "value": 49,
-          "delta": 9
+          "delta": 0
         },
         "sent": {
           "value": 49,
-          "delta": 9
+          "delta": 0
         },
         "delivered": {
           "value": 42,
-          "delta": 9
+          "delta": 0
         },
         "bounced": {
           "value": 6,
@@ -174,7 +174,7 @@ window.appData = {
         },
         "replyRate": {
           "value": 2.4,
-          "delta": -0.6
+          "delta": 0
         },
         "rfqReceived": {
           "value": 1,
@@ -250,7 +250,7 @@ window.appData = {
           "delta": 0
         },
         "inmailSent": {
-          "value": 40,
+          "value": 50,
           "delta": 10
         }
       }
@@ -262,7 +262,7 @@ window.appData = {
       "stage": "active",
       "metrics": {
         "contacts": {
-          "value": 64,
+          "value": 74,
           "delta": 10
         },
         "notAddedToSequence": {
@@ -270,20 +270,20 @@ window.appData = {
           "delta": -10
         },
         "inbox": {
-          "value": 64,
+          "value": 74,
           "delta": 10
         },
         "sent": {
-          "value": 64,
+          "value": 74,
           "delta": 10
         },
         "delivered": {
-          "value": 57,
-          "delta": 6
+          "value": 69,
+          "delta": 12
         },
         "bounced": {
           "value": 5,
-          "delta": 2
+          "delta": 0
         },
         "spamBlocked": {
           "value": 0,
@@ -294,16 +294,16 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 2,
-          "delta": 1
+          "value": 4,
+          "delta": 2
         },
         "replyRate": {
-          "value": 3.5,
-          "delta": 1.5
+          "value": 5.8,
+          "delta": 2.3
         },
         "rfqReceived": {
           "value": 1,
-          "delta": 1
+          "delta": 0
         }
       },
       "type": "email"
