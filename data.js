@@ -1,7 +1,7 @@
 window.appData = {
-  "lastUpdated": "2026-06-19T09:13:18.789Z",
-  "lastSync": "2026-06-19T09:13:22.304Z",
-  "reportDate": "2026-06-19",
+  "lastUpdated": "2026-06-22T13:14:29.393Z",
+  "lastSync": "2026-06-22T13:14:34.929Z",
+  "reportDate": "2026-06-22",
   "campaigns": [
     {
       "id": "cvizrjemq",
@@ -20,7 +20,7 @@ window.appData = {
         },
         "inbox": {
           "value": 125,
-          "delta": 21
+          "delta": 0
         },
         "sent": {
           "value": 0,
@@ -43,19 +43,19 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 4,
-          "delta": 3
+          "value": 5,
+          "delta": 1
         },
         "replyRate": {
-          "value": 20,
-          "delta": 10
+          "value": 16.6,
+          "delta": -3.4
         },
         "rfqReceived": {
           "value": 0,
           "delta": 0
         },
         "connectionSent": {
-          "value": 20,
+          "value": 30,
           "delta": 10
         },
         "inmailSent": {
@@ -63,16 +63,16 @@ window.appData = {
           "delta": 0
         },
         "connectAccepted": {
-          "value": 4,
-          "delta": 3
+          "value": 5,
+          "delta": 1
         },
         "acceptRate": {
-          "value": 20,
-          "delta": 10
+          "value": 16.6,
+          "delta": -3.4
         },
         "followed": {
           "value": 125,
-          "delta": 21
+          "delta": 0
         }
       }
     },
@@ -84,27 +84,27 @@ window.appData = {
       "stage": "active",
       "metrics": {
         "contacts": {
-          "value": 60,
+          "value": 39,
           "delta": 0
         },
         "notAddedToSequence": {
-          "value": 40,
-          "delta": -10
+          "value": 0,
+          "delta": -9
         },
         "inbox": {
-          "value": 30,
-          "delta": 10
+          "value": 39,
+          "delta": 9
         },
         "sent": {
-          "value": 30,
-          "delta": 10
+          "value": 39,
+          "delta": 9
         },
         "delivered": {
-          "value": 27,
-          "delta": 8
+          "value": 34,
+          "delta": 7
         },
         "bounced": {
-          "value": 3,
+          "value": 5,
           "delta": 2
         },
         "spamBlocked": {
@@ -250,7 +250,7 @@ window.appData = {
           "delta": 0
         },
         "inmailSent": {
-          "value": 50,
+          "value": 60,
           "delta": 10
         }
       }
@@ -262,7 +262,7 @@ window.appData = {
       "stage": "active",
       "metrics": {
         "contacts": {
-          "value": 74,
+          "value": 84,
           "delta": 10
         },
         "notAddedToSequence": {
@@ -270,20 +270,20 @@ window.appData = {
           "delta": -10
         },
         "inbox": {
-          "value": 74,
+          "value": 84,
           "delta": 10
         },
         "sent": {
-          "value": 74,
+          "value": 84,
           "delta": 10
         },
         "delivered": {
-          "value": 69,
-          "delta": 12
+          "value": 78,
+          "delta": 9
         },
         "bounced": {
-          "value": 5,
-          "delta": 0
+          "value": 6,
+          "delta": 1
         },
         "spamBlocked": {
           "value": 0,
@@ -295,11 +295,11 @@ window.appData = {
         },
         "replies": {
           "value": 4,
-          "delta": 2
+          "delta": 0
         },
         "replyRate": {
-          "value": 5.8,
-          "delta": 2.3
+          "value": 5.1,
+          "delta": -0.7
         },
         "rfqReceived": {
           "value": 1,
