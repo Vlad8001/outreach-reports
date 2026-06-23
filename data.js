@@ -1,7 +1,7 @@
 window.appData = {
-  "lastUpdated": "2026-06-22T13:14:29.393Z",
-  "lastSync": "2026-06-22T13:14:34.929Z",
-  "reportDate": "2026-06-22",
+  "lastUpdated": "2026-06-23T12:59:12.526Z",
+  "lastSync": "2026-06-23T12:59:16.962Z",
+  "reportDate": "2026-06-23",
   "campaigns": [
     {
       "id": "cvizrjemq",
@@ -44,11 +44,11 @@ window.appData = {
         },
         "replies": {
           "value": 5,
-          "delta": 1
+          "delta": 0
         },
         "replyRate": {
-          "value": 16.6,
-          "delta": -3.4
+          "value": 16.1,
+          "delta": 0
         },
         "rfqReceived": {
           "value": 0,
@@ -64,11 +64,11 @@ window.appData = {
         },
         "connectAccepted": {
           "value": 5,
-          "delta": 1
+          "delta": 0
         },
         "acceptRate": {
-          "value": 16.6,
-          "delta": -3.4
+          "value": 16.1,
+          "delta": 0
         },
         "followed": {
           "value": 125,
@@ -81,7 +81,7 @@ window.appData = {
       "name": "NOVA TOR - A-Class Buildings (eng and construction)",
       "tag": "Email",
       "type": "email",
-      "stage": "active",
+      "stage": "followup",
       "metrics": {
         "contacts": {
           "value": 39,
@@ -89,19 +89,19 @@ window.appData = {
         },
         "notAddedToSequence": {
           "value": 0,
-          "delta": -9
+          "delta": 0
         },
         "inbox": {
           "value": 39,
-          "delta": 9
+          "delta": 0
         },
         "sent": {
           "value": 39,
-          "delta": 9
+          "delta": 0
         },
         "delivered": {
           "value": 34,
-          "delta": 7
+          "delta": 0
         },
         "bounced": {
           "value": 5,
@@ -222,12 +222,12 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 22,
-          "delta": 0
+          "value": 23,
+          "delta": 1
         },
         "replyRate": {
-          "value": 18.1,
-          "delta": 0
+          "value": 19,
+          "delta": 0.9
         },
         "rfqReceived": {
           "value": 5,
@@ -238,19 +238,19 @@ window.appData = {
           "delta": 0
         },
         "connectAccepted": {
-          "value": 22,
-          "delta": 0
+          "value": 23,
+          "delta": 1
         },
         "acceptRate": {
-          "value": 18.1,
-          "delta": 0
+          "value": 19,
+          "delta": 0.9
         },
         "followed": {
           "value": 123,
           "delta": 0
         },
         "inmailSent": {
-          "value": 60,
+          "value": 70,
           "delta": 10
         }
       }
@@ -262,7 +262,7 @@ window.appData = {
       "stage": "active",
       "metrics": {
         "contacts": {
-          "value": 84,
+          "value": 94,
           "delta": 10
         },
         "notAddedToSequence": {
@@ -270,20 +270,20 @@ window.appData = {
           "delta": -10
         },
         "inbox": {
-          "value": 84,
+          "value": 94,
           "delta": 10
         },
         "sent": {
-          "value": 84,
+          "value": 94,
           "delta": 10
         },
         "delivered": {
-          "value": 78,
+          "value": 88,
           "delta": 9
         },
         "bounced": {
           "value": 6,
-          "delta": 1
+          "delta": 0
         },
         "spamBlocked": {
           "value": 0,
@@ -298,8 +298,8 @@ window.appData = {
           "delta": 0
         },
         "replyRate": {
-          "value": 5.1,
-          "delta": -0.7
+          "value": 4.5,
+          "delta": -0.6
         },
         "rfqReceived": {
           "value": 1,
