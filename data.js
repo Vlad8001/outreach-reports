@@ -1,7 +1,7 @@
 window.appData = {
-  "lastUpdated": "2026-06-23T12:59:12.526Z",
-  "lastSync": "2026-06-23T12:59:16.962Z",
-  "reportDate": "2026-06-23",
+  "lastUpdated": "2026-06-24T12:07:28.655Z",
+  "lastSync": "2026-06-24T12:07:33.005Z",
+  "reportDate": "2026-06-24",
   "campaigns": [
     {
       "id": "cvizrjemq",
@@ -222,35 +222,35 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 23,
-          "delta": 1
+          "value": 25,
+          "delta": 2
         },
         "replyRate": {
-          "value": 19,
-          "delta": 0.9
+          "value": 20.6,
+          "delta": 1.6
         },
         "rfqReceived": {
-          "value": 5,
-          "delta": 0
+          "value": 7,
+          "delta": 2
         },
         "connectionSent": {
           "value": 121,
           "delta": 0
         },
         "connectAccepted": {
-          "value": 23,
-          "delta": 1
+          "value": 25,
+          "delta": 2
         },
         "acceptRate": {
-          "value": 19,
-          "delta": 0.9
+          "value": 20.6,
+          "delta": 1.6
         },
         "followed": {
           "value": 123,
           "delta": 0
         },
         "inmailSent": {
-          "value": 70,
+          "value": 80,
           "delta": 10
         }
       }
@@ -259,11 +259,11 @@ window.appData = {
       "id": "cepx6kq39",
       "name": "NOVA TOR - Commercial GC(Top management)",
       "tag": "Email",
-      "stage": "active",
+      "stage": "followup",
       "metrics": {
         "contacts": {
           "value": 94,
-          "delta": 10
+          "delta": 0
         },
         "notAddedToSequence": {
           "value": 0,
@@ -271,15 +271,15 @@ window.appData = {
         },
         "inbox": {
           "value": 94,
-          "delta": 10
+          "delta": 0
         },
         "sent": {
           "value": 94,
-          "delta": 10
+          "delta": 0
         },
         "delivered": {
           "value": 88,
-          "delta": 9
+          "delta": 0
         },
         "bounced": {
           "value": 6,
@@ -299,7 +299,7 @@ window.appData = {
         },
         "replyRate": {
           "value": 4.5,
-          "delta": -0.6
+          "delta": 0
         },
         "rfqReceived": {
           "value": 1,
@@ -553,12 +553,12 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 0,
-          "delta": 0
+          "value": 1,
+          "delta": 1
         },
         "replyRate": {
-          "value": 0,
-          "delta": 0
+          "value": 2.4,
+          "delta": 2.4
         },
         "rfqReceived": {
           "value": 0,
@@ -713,11 +713,11 @@ window.appData = {
         },
         "replies": {
           "value": 11,
-          "delta": 1
+          "delta": 0
         },
         "replyRate": {
           "value": 7.5,
-          "delta": 0.7
+          "delta": 0
         },
         "rfqReceived": {
           "value": 8,
