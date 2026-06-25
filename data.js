@@ -1,7 +1,7 @@
 window.appData = {
-  "lastUpdated": "2026-06-24T12:07:28.655Z",
-  "lastSync": "2026-06-24T12:07:33.005Z",
-  "reportDate": "2026-06-24",
+  "lastUpdated": "2026-06-25T12:00:31.190Z",
+  "lastSync": "2026-06-25T12:00:35.082Z",
+  "reportDate": "2026-06-25",
   "campaigns": [
     {
       "id": "cvizrjemq",
@@ -223,15 +223,15 @@ window.appData = {
         },
         "replies": {
           "value": 25,
-          "delta": 2
+          "delta": 0
         },
         "replyRate": {
           "value": 20.6,
-          "delta": 1.6
+          "delta": 0
         },
         "rfqReceived": {
           "value": 7,
-          "delta": 2
+          "delta": 0
         },
         "connectionSent": {
           "value": 121,
@@ -239,19 +239,19 @@ window.appData = {
         },
         "connectAccepted": {
           "value": 25,
-          "delta": 2
+          "delta": 0
         },
         "acceptRate": {
           "value": 20.6,
-          "delta": 1.6
+          "delta": 0
         },
         "followed": {
           "value": 123,
           "delta": 0
         },
         "inmailSent": {
-          "value": 80,
-          "delta": 10
+          "value": 84,
+          "delta": 4
         }
       }
     },
@@ -259,7 +259,7 @@ window.appData = {
       "id": "cepx6kq39",
       "name": "NOVA TOR - Commercial GC(Top management)",
       "tag": "Email",
-      "stage": "followup",
+      "stage": "active",
       "metrics": {
         "contacts": {
           "value": 94,
@@ -267,7 +267,7 @@ window.appData = {
         },
         "notAddedToSequence": {
           "value": 0,
-          "delta": -10
+          "delta": 0
         },
         "inbox": {
           "value": 94,
