@@ -1,7 +1,7 @@
 window.appData = {
-  "lastUpdated": "2026-06-26T13:53:18.168Z",
-  "lastSync": "2026-06-26T13:53:21.417Z",
-  "reportDate": "2026-06-26",
+  "lastUpdated": "2026-06-29T14:30:51.695Z",
+  "lastSync": "2026-06-29T14:30:58.961Z",
+  "reportDate": "2026-06-29",
   "campaigns": [
     {
       "id": "cvizrjemq",
@@ -43,32 +43,32 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 5,
-          "delta": 0
+          "value": 6,
+          "delta": 1
         },
         "replyRate": {
-          "value": 12.5,
-          "delta": -3.6
+          "value": 12,
+          "delta": -0.5
         },
         "rfqReceived": {
           "value": 0,
           "delta": 0
         },
         "connectionSent": {
-          "value": 40,
+          "value": 50,
           "delta": 10
         },
         "inmailSent": {
-          "value": 10,
-          "delta": 10
+          "value": 15,
+          "delta": 5
         },
         "connectAccepted": {
-          "value": 5,
-          "delta": 0
+          "value": 6,
+          "delta": 1
         },
         "acceptRate": {
-          "value": 12.5,
-          "delta": -3.6
+          "value": 12,
+          "delta": -0.5
         },
         "followed": {
           "value": 125,
@@ -222,28 +222,28 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 25,
+          "value": 26,
           "delta": 0
         },
         "replyRate": {
-          "value": 20.6,
-          "delta": 0
+          "value": 21.1,
+          "delta": 0.5
         },
         "rfqReceived": {
           "value": 7,
           "delta": 0
         },
         "connectionSent": {
-          "value": 121,
-          "delta": 0
+          "value": 123,
+          "delta": 2
         },
         "connectAccepted": {
-          "value": 25,
+          "value": 26,
           "delta": 0
         },
         "acceptRate": {
-          "value": 20.6,
-          "delta": 0
+          "value": 21.1,
+          "delta": 0.5
         },
         "followed": {
           "value": 123,
@@ -259,7 +259,7 @@ window.appData = {
       "id": "cepx6kq39",
       "name": "NOVA TOR - Commercial GC(Top management)",
       "tag": "Email",
-      "stage": "active",
+      "stage": "followup",
       "metrics": {
         "contacts": {
           "value": 94,
