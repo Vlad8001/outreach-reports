@@ -1,7 +1,7 @@
 window.appData = {
-  "lastUpdated": "2026-06-29T14:30:51.695Z",
-  "lastSync": "2026-06-29T14:30:58.961Z",
-  "reportDate": "2026-06-29",
+  "lastUpdated": "2026-06-30T13:15:39.247Z",
+  "lastSync": "2026-06-30T13:15:43.351Z",
+  "reportDate": "2026-06-30",
   "campaigns": [
     {
       "id": "cvizrjemq",
@@ -43,32 +43,32 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 6,
+          "value": 7,
           "delta": 1
         },
         "replyRate": {
-          "value": 12,
-          "delta": -0.5
+          "value": 11.6,
+          "delta": -0.4
         },
         "rfqReceived": {
           "value": 0,
           "delta": 0
         },
         "connectionSent": {
-          "value": 50,
+          "value": 60,
           "delta": 10
         },
         "inmailSent": {
           "value": 15,
-          "delta": 5
+          "delta": 0
         },
         "connectAccepted": {
-          "value": 6,
+          "value": 7,
           "delta": 1
         },
         "acceptRate": {
-          "value": 12,
-          "delta": -0.5
+          "value": 11.6,
+          "delta": -0.4
         },
         "followed": {
           "value": 125,
@@ -187,7 +187,7 @@ window.appData = {
       "name": "RADII-X GPR Prospects LinkedIn ",
       "tag": "LinkedIn",
       "type": "linkedin",
-      "stage": "active",
+      "stage": "followup",
       "metrics": {
         "contacts": {
           "value": 0,
