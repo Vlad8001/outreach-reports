@@ -1,7 +1,7 @@
 window.appData = {
-  "lastUpdated": "2026-06-30T13:16:13.874Z",
-  "lastSync": "2026-06-30T13:16:50.800Z",
-  "reportDate": "2026-06-30",
+  "lastUpdated": "2026-07-02T13:32:22.370Z",
+  "lastSync": "2026-07-02T13:32:27.670Z",
+  "reportDate": "2026-07-02",
   "campaigns": [
     {
       "id": "cvizrjemq",
@@ -44,19 +44,19 @@ window.appData = {
         },
         "replies": {
           "value": 7,
-          "delta": 1
+          "delta": 0
         },
         "replyRate": {
           "value": 11.7,
-          "delta": -0.3
+          "delta": 0
         },
         "rfqReceived": {
           "value": 0,
           "delta": 0
         },
         "connectionSent": {
-          "value": 60,
-          "delta": 10
+          "value": 61,
+          "delta": 1
         },
         "inmailSent": {
           "value": 15,
@@ -64,11 +64,11 @@ window.appData = {
         },
         "connectAccepted": {
           "value": 7,
-          "delta": 1
+          "delta": 0
         },
         "acceptRate": {
           "value": 11.7,
-          "delta": -0.3
+          "delta": 0
         },
         "followed": {
           "value": 125,
@@ -222,12 +222,12 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 26,
-          "delta": 0
+          "value": 27,
+          "delta": 1
         },
         "replyRate": {
-          "value": 21.1,
-          "delta": 0.5
+          "value": 22,
+          "delta": 0.9
         },
         "rfqReceived": {
           "value": 7,
@@ -235,15 +235,15 @@ window.appData = {
         },
         "connectionSent": {
           "value": 123,
-          "delta": 2
-        },
-        "connectAccepted": {
-          "value": 26,
           "delta": 0
         },
+        "connectAccepted": {
+          "value": 27,
+          "delta": 1
+        },
         "acceptRate": {
-          "value": 21.1,
-          "delta": 0.5
+          "value": 22,
+          "delta": 0.9
         },
         "followed": {
           "value": 123,
