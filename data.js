@@ -1,7 +1,7 @@
 window.appData = {
-  "lastUpdated": "2026-07-09T12:55:47.268Z",
-  "lastSync": "2026-07-09T12:55:50.794Z",
-  "reportDate": "2026-07-09",
+  "lastUpdated": "2026-07-10T11:06:03.397Z",
+  "lastSync": "2026-07-10T11:06:16.503Z",
+  "reportDate": "2026-07-10",
   "campaigns": [
     {
       "id": "cvizrjemq",
@@ -43,11 +43,11 @@ window.appData = {
           "delta": 0
         },
         "replies": {
-          "value": 11,
+          "value": 12,
           "delta": 1
         },
         "replyRate": {
-          "value": 18,
+          "value": 19.7,
           "delta": 1.7
         },
         "rfqReceived": {
@@ -63,11 +63,11 @@ window.appData = {
           "delta": 0
         },
         "connectAccepted": {
-          "value": 11,
+          "value": 12,
           "delta": 1
         },
         "acceptRate": {
-          "value": 18,
+          "value": 19.7,
           "delta": 1.7
         },
         "followed": {
