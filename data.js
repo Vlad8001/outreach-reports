@@ -1,7 +1,7 @@
 window.appData = {
-  "lastUpdated": "2026-07-27T12:16:30.518Z",
-  "lastSync": "2026-07-27T12:16:33.943Z",
-  "reportDate": "2026-07-27",
+  "lastUpdated": "2026-07-29T09:10:41.771Z",
+  "lastSync": "2026-07-29T09:10:52.032Z",
+  "reportDate": "2026-07-29",
   "campaigns": [
     {
       "id": "cvizrjemq",
@@ -55,12 +55,12 @@ window.appData = {
           "delta": 1
         },
         "connectionSent": {
-          "value": 110,
+          "value": 120,
           "delta": 10
         },
         "inmailSent": {
-          "value": 32,
-          "delta": 0
+          "value": 82,
+          "delta": 10
         },
         "connectAccepted": {
           "value": 23,
